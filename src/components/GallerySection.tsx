@@ -172,8 +172,14 @@ const GallerySection = () => {
               <div className="relative overflow-hidden">
                 <img
                   src={artwork.image}
-                  alt={artwork.title}
+                  alt={`${artwork.title} - ${artwork.description}`}
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
+                  loading="lazy"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = '/placeholder.svg';
+                    target.alt = 'Artwork image unavailable';
+                  }}
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300">
                   <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -182,13 +188,26 @@ const GallerySection = () => {
                       variant="secondary"
                       onClick={() => toggleFavorite(artwork.id)}
                       className="p-2"
+                      aria-label={favorites.includes(artwork.id) ? `Remove ${artwork.title} from favorites` : `Add ${artwork.title} to favorites`}
                     >
                       <Heart className={`h-4 w-4 ${favorites.includes(artwork.id) ? 'fill-current text-highlight' : ''}`} />
                     </Button>
-                    <Button size="sm" variant="secondary" className="p-2">
+                    <Button 
+                      size="sm" 
+                      variant="secondary" 
+                      className="p-2"
+                      onClick={() => navigator.share?.({ title: artwork.title, text: artwork.description, url: window.location.href })}
+                      aria-label={`Share ${artwork.title}`}
+                    >
                       <Share2 className="h-4 w-4" />
                     </Button>
-                    <Button size="sm" variant="secondary" className="p-2">
+                    <Button 
+                      size="sm" 
+                      variant="secondary" 
+                      className="p-2"
+                      onClick={() => window.open(artwork.image, '_blank')}
+                      aria-label={`View full size image of ${artwork.title}`}
+                    >
                       <ZoomIn className="h-4 w-4" />
                     </Button>
                   </div>

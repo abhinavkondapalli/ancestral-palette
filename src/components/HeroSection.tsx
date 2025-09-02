@@ -72,8 +72,14 @@ const HeroSection = () => {
         >
           <img
             src={slide.image}
-            alt={slide.title}
+            alt={`${slide.title} - ${slide.description}`}
             className="w-full h-full object-cover"
+            loading={index === 0 ? "eager" : "lazy"}
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.src = '/placeholder.svg';
+              target.alt = 'Artwork image unavailable';
+            }}
           />
           <div className="absolute inset-0 overlay-gradient"></div>
         </div>
@@ -113,11 +119,22 @@ const HeroSection = () => {
                     </p>
                     
                     <div className="flex flex-col sm:flex-row gap-4">
-                      <Button size="lg" className="hero-btn-primary group">
+                      <Button 
+                        size="lg" 
+                        className="hero-btn-primary group"
+                        onClick={() => document.querySelector('#gallery')?.scrollIntoView({ behavior: 'smooth' })}
+                        aria-label="Navigate to gallery section"
+                      >
                         Explore Gallery
                         <Play className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                       </Button>
-                      <Button variant="outline" size="lg" className="hero-btn-secondary">
+                      <Button 
+                        variant="outline" 
+                        size="lg" 
+                        className="hero-btn-secondary"
+                        onClick={() => document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' })}
+                        aria-label="Navigate to artist story section"
+                      >
                         Artist Story
                       </Button>
                     </div>

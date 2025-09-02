@@ -11,9 +11,17 @@ const Navigation = () => {
     { label: "Home", href: "#home" },
     { label: "Gallery", href: "#gallery" },
     { label: "About", href: "#about" },
-    { label: "Collections", href: "#collections" },
+    { label: "Collections", href: "#gallery" },
     { label: "Contact", href: "#contact" },
   ];
+
+  const handleNavClick = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setIsMenuOpen(false);
+    }
+  };
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-sm border-b border-border pattern-border">
@@ -35,13 +43,14 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
+              <button
                 key={item.label}
-                href={item.href}
-                className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
+                onClick={() => handleNavClick(item.href)}
+                className="text-foreground hover:text-primary transition-colors duration-300 font-medium focus:outline-none focus:ring-2 focus:ring-primary/20 rounded-md px-2 py-1"
+                aria-label={`Navigate to ${item.label} section`}
               >
                 {item.label}
-              </a>
+              </button>
             ))}
           </div>
 
@@ -75,14 +84,14 @@ const Navigation = () => {
           <div className="md:hidden mt-4 pb-4 border-t border-border">
             <div className="flex flex-col space-y-4 pt-4">
               {navItems.map((item) => (
-                <a
+                <button
                   key={item.label}
-                  href={item.href}
-                  className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={() => handleNavClick(item.href)}
+                  className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-left focus:outline-none focus:ring-2 focus:ring-primary/20 rounded-md px-2 py-1"
+                  aria-label={`Navigate to ${item.label} section`}
                 >
                   {item.label}
-                </a>
+                </button>
               ))}
               <div className="relative mt-4">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
