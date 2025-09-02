@@ -45,11 +45,11 @@ const AboutSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-6">
-            The Artist's Journey
+            Eternal Legacy
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A lifetime devoted to preserving India's rich artistic heritage through traditional 
-            techniques, natural pigments, and stories passed down through generations.
+            The spirit of Kondapalli Sheshagiri Rao lives on through his art, his teachings, 
+            and the countless lives he touched with his devotion to cultural preservation.
           </p>
         </div>
 

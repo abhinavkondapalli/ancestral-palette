@@ -8,11 +8,11 @@ const Navigation = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
   const navItems = [
-    { label: "Home", href: "#home" },
-    { label: "Gallery", href: "#gallery" },
-    { label: "About", href: "#about" },
-    { label: "Collections", href: "#gallery" },
-    { label: "Contact", href: "#contact" },
+    { label: "Memorial", href: "#home" },
+    { label: "His Journey", href: "#story" },
+    { label: "Collection", href: "#gallery" },
+    { label: "Legacy", href: "#about" },
+    { label: "Connect", href: "#contact" },
   ];
 
   const handleNavClick = (href: string) => {
@@ -34,9 +34,9 @@ const Navigation = () => {
             </div>
             <div>
               <h1 className="text-xl font-serif font-semibold text-foreground">
-                Heritage Gallery
+                Sheshagiri Rao Memorial
               </h1>
-              <p className="text-xs text-muted-foreground">Indian Cultural Art</p>
+              <p className="text-xs text-muted-foreground">Master Artist · 1935-2010</p>
             </div>
           </div>
 

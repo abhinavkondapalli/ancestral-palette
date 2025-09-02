@@ -75,18 +75,31 @@ const GallerySection = () => {
   ];
 
   const categories = [
-    { id: "all", label: "All Artworks", count: artworks.length },
-    { id: "madhubani", label: "Madhubani", count: artworks.filter(a => a.category === "madhubani").length },
-    { id: "warli", label: "Warli", count: artworks.filter(a => a.category === "warli").length },
-    { id: "tanjore", label: "Tanjore", count: artworks.filter(a => a.category === "tanjore").length },
-    { id: "miniature", label: "Miniature", count: artworks.filter(a => a.category === "miniature").length }
+    { id: "all", label: "Complete Collection", count: artworks.length },
+    { id: "mythology", label: "Sacred Mythology", count: artworks.filter(a => a.category === "madhubani" || a.category === "tanjore").length },
+    { id: "folklife", label: "Folk Life", count: artworks.filter(a => a.category === "warli").length },
+    { id: "nature", label: "Natural Harmony", count: artworks.filter(a => a.category === "miniature").length },
+    { id: "legacy", label: "Master's Legacy", count: artworks.length }
   ];
 
   const filteredArtworks = artworks.filter(artwork => {
     const matchesSearch = artwork.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          artwork.artist.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          artwork.description.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesCategory = selectedCategory === "all" || artwork.category === selectedCategory;
+    let matchesCategory = true;
+    
+    if (selectedCategory === "mythology") {
+      matchesCategory = artwork.category === "madhubani" || artwork.category === "tanjore";
+    } else if (selectedCategory === "folklife") {
+      matchesCategory = artwork.category === "warli";
+    } else if (selectedCategory === "nature") {
+      matchesCategory = artwork.category === "miniature";
+    } else if (selectedCategory === "legacy") {
+      matchesCategory = true;
+    } else if (selectedCategory !== "all") {
+      matchesCategory = artwork.category === selectedCategory;
+    }
+    
     return matchesSearch && matchesCategory;
   });
 
@@ -102,11 +115,14 @@ const GallerySection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-6">
-            Cultural Art Gallery
+            The Master's Collection
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Explore a curated collection of traditional Indian art forms, each piece telling 
-            a story of cultural heritage and artistic mastery passed down through generations.
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-4">
+            Journey through the artistic legacy of Kondapalli Sheshagiri Rao, where mythology, 
+            folk life, and nature converge in timeless masterpieces.
+          </p>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto italic">
+            Each canvas bears witness to a life devoted to preserving India's cultural soul
           </p>
         </div>
 
@@ -220,13 +236,13 @@ const GallerySection = () => {
               </div>
               
               <CardContent className="p-6">
-                <div className="flex justify-between items-start mb-3">
-                  <h3 className="text-xl font-serif font-semibold text-foreground group-hover:text-primary transition-colors">
+                <div className="mb-3">
+                  <h3 className="text-xl font-serif font-semibold text-foreground group-hover:text-primary transition-colors mb-2">
                     {artwork.title}
                   </h3>
-                  <span className="text-lg font-semibold text-primary">
-                    {artwork.price}
-                  </span>
+                  <p className="text-sm text-accent font-medium">
+                    From the Master's Collection
+                  </p>
                 </div>
                 
                 <p className="text-muted-foreground mb-2">
@@ -243,8 +259,8 @@ const GallerySection = () => {
                   <Badge variant="outline">{artwork.period}</Badge>
                 </div>
                 
-                <Button className="w-full">
-                  View Details
+                <Button className="w-full" variant="outline">
+                  Enquire to Collect
                 </Button>
               </CardContent>
             </Card>

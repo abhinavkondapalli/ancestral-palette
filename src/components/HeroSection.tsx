@@ -13,35 +13,35 @@ const HeroSection = () => {
   const slides = [
     {
       id: 1,
-      title: "Preserving Cultural Heritage",
-      subtitle: "A Grandfather's Artistic Legacy",
-      description: "Discover the timeless beauty of traditional Indian art forms through the masterful works of a dedicated artist.",
+      title: "Kondapalli Sheshagiri Rao",
+      subtitle: "Master of Indian Cultural Art",
+      description: "In loving memory of an artist whose life was devoted to preserving India's sacred artistic traditions.",
       image: heroImage,
-      accent: "Madhubani Traditions"
+      accent: "1935 - 2010"
     },
     {
       id: 2,
-      title: "Madhubani Folk Art",
-      subtitle: "Sacred Geometry & Nature",
-      description: "Intricate patterns that tell stories of devotion, nature, and the divine cosmos in vibrant natural pigments.",
+      title: "Sacred Mythology",
+      subtitle: "Divine Stories in Color",
+      description: "His Madhubani works captured cosmic order and divine harmony, each stroke a prayer to the eternal.",
       image: madhubaniArt,
-      accent: "Bihar Heritage"
+      accent: "Spiritual Expression"
     },
     {
       id: 3,
-      title: "Warli Tribal Art",
-      subtitle: "Village Life in White",
-      description: "Simple yet profound depictions of daily life, celebrating community, harvest, and spiritual ceremonies.",
+      title: "Folk Life Celebrations",
+      subtitle: "Community & Harvest",
+      description: "Through Warli art, he celebrated the simple joys of village life, unity, and agricultural traditions.",
       image: warliArt,
-      accent: "Tribal Wisdom"
+      accent: "Cultural Memory"
     },
     {
       id: 4,
-      title: "Tanjore Paintings",
-      subtitle: "Divine Splendor",
-      description: "Sacred art embellished with gold leaf and precious stones, bringing divine presence to earthly canvas.",
+      title: "Natural Harmony",
+      subtitle: "Beauty in Every Detail",
+      description: "His masterful Tanjore works embodied the divine presence he felt in nature's every manifestation.",
       image: tanjoreArt,
-      accent: "Temple Art"
+      accent: "Master's Touch"
     }
   ];
 
@@ -125,17 +125,17 @@ const HeroSection = () => {
                         onClick={() => document.querySelector('#gallery')?.scrollIntoView({ behavior: 'smooth' })}
                         aria-label="Navigate to gallery section"
                       >
-                        Explore Gallery
+                        Enter the Gallery
                         <Play className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                       </Button>
                       <Button 
                         variant="outline" 
                         size="lg" 
                         className="hero-btn-secondary"
-                        onClick={() => document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' })}
-                        aria-label="Navigate to artist story section"
+                        onClick={() => document.querySelector('#story')?.scrollIntoView({ behavior: 'smooth' })}
+                        aria-label="Navigate to master's story section"
                       >
-                        Artist Story
+                        His Journey
                       </Button>
                     </div>
                   </>
