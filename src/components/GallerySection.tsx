@@ -4,10 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Search, Filter, Grid, List, Heart, Share2, ZoomIn } from "lucide-react";
-import madhubaniArt from "@/assets/artwork-madhubani.jpg";
-import warliArt from "@/assets/artwork-warli.jpg";
-import tanjoreArt from "@/assets/artwork-tanjore.jpg";
-import miniatureArt from "@/assets/artwork-miniature.jpg";
+import { artworks, categories, getArtworksByCategory, searchArtworks } from "@/data/artworks";
 
 const GallerySection = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -15,93 +12,15 @@ const GallerySection = () => {
   const [viewMode, setViewMode] = useState("grid");
   const [favorites, setFavorites] = useState<number[]>([]);
 
-  const artworks = [
-    {
-      id: 1,
-      title: "Sacred Geometry",
-      artist: "Traditional Madhubani",
-      category: "madhubani",
-      period: "Contemporary",
-      year: "2020",
-      description: "Intricate geometric patterns depicting the cosmic order and divine harmony.",
-      image: madhubaniArt,
-      price: "₹25,000",
-      dimensions: "24\" x 18\"",
-      medium: "Natural pigments on handmade paper",
-      cultural_significance: "Represents the eternal cycle of life and nature's abundance"
-    },
-    {
-      id: 2,
-      title: "Village Celebration",
-      artist: "Tribal Warli",
-      category: "warli",
-      period: "Traditional",
-      year: "2019",
-      description: "A vibrant depiction of harvest festival celebrations in tribal Maharashtra.",
-      image: warliArt,
-      price: "₹18,000",
-      dimensions: "20\" x 16\"",
-      medium: "White pigment on mud canvas",
-      cultural_significance: "Celebrates community unity and agricultural traditions"
-    },
-    {
-      id: 3,
-      title: "Divine Radiance",
-      artist: "South Indian Tanjore",
-      category: "tanjore",
-      period: "Classical",
-      year: "2021",
-      description: "A magnificent portrayal of divinity with gold leaf embellishments.",
-      image: tanjoreArt,
-      price: "₹45,000",
-      dimensions: "30\" x 24\"",
-      medium: "Gold leaf and precious stones on canvas",
-      cultural_significance: "Sacred art form from Tamil Nadu temple traditions"
-    },
-    {
-      id: 4,
-      title: "Royal Court",
-      artist: "Mughal Miniature",
-      category: "miniature",
-      period: "Classical",
-      year: "2018",
-      description: "Exquisite miniature painting showcasing Mughal courtly elegance.",
-      image: miniatureArt,
-      price: "₹35,000",
-      dimensions: "12\" x 9\"",
-      medium: "Natural pigments on ivory paper",
-      cultural_significance: "Represents the synthesis of Persian and Indian artistic traditions"
-    }
-  ];
+  // Using the real artwork collection from Kondapalli Sheshagiri Rao
 
-  const categories = [
-    { id: "all", label: "Complete Collection", count: artworks.length },
-    { id: "mythology", label: "Sacred Mythology", count: artworks.filter(a => a.category === "madhubani" || a.category === "tanjore").length },
-    { id: "folklife", label: "Folk Life", count: artworks.filter(a => a.category === "warli").length },
-    { id: "nature", label: "Natural Harmony", count: artworks.filter(a => a.category === "miniature").length },
-    { id: "legacy", label: "Master's Legacy", count: artworks.length }
-  ];
+  // Categories are now imported from the artwork data
 
-  const filteredArtworks = artworks.filter(artwork => {
-    const matchesSearch = artwork.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         artwork.artist.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         artwork.description.toLowerCase().includes(searchQuery.toLowerCase());
-    let matchesCategory = true;
-    
-    if (selectedCategory === "mythology") {
-      matchesCategory = artwork.category === "madhubani" || artwork.category === "tanjore";
-    } else if (selectedCategory === "folklife") {
-      matchesCategory = artwork.category === "warli";
-    } else if (selectedCategory === "nature") {
-      matchesCategory = artwork.category === "miniature";
-    } else if (selectedCategory === "legacy") {
-      matchesCategory = true;
-    } else if (selectedCategory !== "all") {
-      matchesCategory = artwork.category === selectedCategory;
-    }
-    
-    return matchesSearch && matchesCategory;
-  });
+  const filteredArtworks = searchQuery 
+    ? searchArtworks(searchQuery).filter(artwork => 
+        selectedCategory === "all" || artwork.category === selectedCategory
+      )
+    : getArtworksByCategory(selectedCategory);
 
   const toggleFavorite = (id: number) => {
     setFavorites(prev => 
@@ -240,24 +159,32 @@ const GallerySection = () => {
                   <h3 className="text-xl font-serif font-semibold text-foreground group-hover:text-primary transition-colors mb-2">
                     {artwork.title}
                   </h3>
-                  <p className="text-sm text-accent font-medium">
-                    From the Master's Collection
-                  </p>
+                 <p className="text-sm text-accent font-medium">
+                   {artwork.period} • {artwork.year}
+                 </p>
                 </div>
                 
-                <p className="text-muted-foreground mb-2">
-                  {artwork.artist} • {artwork.year}
-                </p>
+                 <p className="text-muted-foreground mb-2 text-sm italic">
+                   {artwork.emotional_tone}
+                 </p>
                 
                 <p className="text-foreground mb-4 leading-relaxed">
                   {artwork.description}
                 </p>
                 
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <Badge variant="outline">{artwork.medium}</Badge>
-                  <Badge variant="outline">{artwork.dimensions}</Badge>
-                  <Badge variant="outline">{artwork.period}</Badge>
-                </div>
+                 <div className="flex flex-wrap gap-2 mb-4">
+                   <Badge variant="outline">{artwork.medium}</Badge>
+                   <Badge variant="outline">{artwork.dimensions}</Badge>
+                   {artwork.mythological_reference && (
+                     <Badge variant="secondary" className="text-xs">
+                       Sacred Story
+                     </Badge>
+                   )}
+                 </div>
+                 
+                 <p className="text-xs text-muted-foreground mb-4 italic leading-relaxed">
+                   {artwork.cultural_significance}
+                 </p>
                 
                 <Button className="w-full" variant="outline">
                   Enquire to Collect

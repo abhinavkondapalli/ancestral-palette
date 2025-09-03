@@ -1,11 +1,8 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, Play } from "lucide-react";
+import { artworks } from "@/data/artworks";
 import heroImage from "@/assets/hero-banner.jpg";
-import madhubaniArt from "@/assets/artwork-madhubani.jpg";
-import warliArt from "@/assets/artwork-warli.jpg";
-import tanjoreArt from "@/assets/artwork-tanjore.jpg";
-import miniatureArt from "@/assets/artwork-miniature.jpg";
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -21,27 +18,27 @@ const HeroSection = () => {
     },
     {
       id: 2,
-      title: "Sacred Mythology",
-      subtitle: "Divine Stories in Color",
-      description: "His Madhubani works captured cosmic order and divine harmony, each stroke a prayer to the eternal.",
-      image: madhubaniArt,
-      accent: "Spiritual Expression"
+      title: artworks[0].title,
+      subtitle: "Sacred Mythology",
+      description: artworks[0].description,
+      image: artworks[0].image,
+      accent: artworks[0].emotional_tone
     },
     {
       id: 3,
-      title: "Folk Life Celebrations",
-      subtitle: "Community & Harvest",
-      description: "Through Warli art, he celebrated the simple joys of village life, unity, and agricultural traditions.",
-      image: warliArt,
-      accent: "Cultural Memory"
+      title: artworks[1].title,
+      subtitle: "Divine Forest Narrative",
+      description: artworks[1].description,
+      image: artworks[1].image,
+      accent: artworks[1].emotional_tone
     },
     {
       id: 4,
-      title: "Natural Harmony",
-      subtitle: "Beauty in Every Detail",
-      description: "His masterful Tanjore works embodied the divine presence he felt in nature's every manifestation.",
-      image: tanjoreArt,
-      accent: "Master's Touch"
+      title: artworks[9].title,
+      subtitle: "Cosmic Consciousness",
+      description: artworks[9].description,
+      image: artworks[9].image,
+      accent: artworks[9].emotional_tone
     }
   ];
 
