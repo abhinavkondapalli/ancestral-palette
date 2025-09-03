@@ -6,37 +6,37 @@ const AboutSection = () => {
   const achievements = [
     {
       icon: <Palette className="h-8 w-8 text-primary" />,
-      title: "50+ Years",
-      subtitle: "Artistic Journey",
-      description: "Five decades dedicated to preserving and creating traditional Indian art"
+      title: "1000+ Artworks",
+      subtitle: "Lifetime Creation",
+      description: "Over one thousand masterpieces spanning mythology, rural life, and spiritual themes"
     },
     {
       icon: <Heart className="h-8 w-8 text-highlight" />,
-      title: "200+ Pieces",
-      subtitle: "Curated Collection",
-      description: "Carefully crafted artworks representing diverse Indian cultural traditions"
+      title: "99 Years",
+      subtitle: "Life of Service",
+      description: "Nearly a century dedicated to art, education, and cultural preservation (1924-2023)"
     },
     {
       icon: <Award className="h-8 w-8 text-accent" />,
-      title: "Cultural Heritage",
-      subtitle: "Preservation Award",
-      description: "Recognized for outstanding contribution to Indian folk art preservation"
+      title: "GI Recognition",
+      subtitle: "Cheriyal Revival",
+      description: "Led the revival that earned Cheriyal scroll painting Geographical Indication status"
     },
     {
       icon: <Users className="h-8 w-8 text-contrast" />,
-      title: "1000+ Students",
-      subtitle: "Artistic Legacy",
-      description: "Knowledge shared with aspiring artists across generations"
+      title: "HoD at JNTU",
+      subtitle: "Educational Legacy",
+      description: "Head of Department at College of Arts & Crafts, mentoring generations of artists"
     }
   ];
 
   const traditions = [
-    "Madhubani Folk Art",
-    "Warli Tribal Painting", 
-    "Tanjore Temple Art",
-    "Mughal Miniatures",
-    "Pattachitra Scrolls",
-    "Kalamkari Textiles"
+    "Aqua Texture Technique",
+    "Cheriyal Scroll Painting", 
+    "Telangana Folk Art",
+    "Kakatiya Temple Art",
+    "Mythological Narratives",
+    "Rural Life Portraits"
   ];
 
   return (
@@ -45,11 +45,12 @@ const AboutSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-6">
-            Eternal Legacy
+            Cultural Guardian & Freedom Fighter
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            The spirit of Kondapalli Sheshagiri Rao lives on through his art, his teachings, 
-            and the countless lives he touched with his devotion to cultural preservation.
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
+            Beyond the canvas, Kondapalli Seshagiri Rao stood as a sentinel of cultural heritage, 
+            a freedom fighter who survived torture by Razakars, and a visionary educator who 
+            understood that preserving art meant preserving the soul of a civilization.
           </p>
         </div>
 
@@ -67,22 +68,22 @@ const AboutSection = () => {
             
             <div className="space-y-6 text-foreground leading-relaxed">
               <p>
-                Born into a family of traditional artists in rural Bihar, our grandfather began his 
-                artistic journey at the age of seven, learning the sacred art of Madhubani painting 
-                from village elders who carried forward centuries-old traditions.
+                In the hallowed halls of Santiniketan, under the guidance of Nandalal Bose and 
+                inspired by Tagore's vision of Swaraj-art, Kondapalli Seshagiri Rao developed 
+                his revolutionary aqua texture technique. This fusion of Chinese and Japanese 
+                influences with pure Indian sensibilities created a new language of artistic expression.
               </p>
               
               <p>
-                His dedication to preserving authentic techniques led him to master multiple art forms 
-                across India. From the geometric precision of Warli art to the divine splendor of 
-                Tanjore paintings, each piece in this collection represents years of study, practice, 
-                and spiritual connection to India's cultural soul.
+                Over 1,000 artworks flowed from his brush—mythological epics, tender rural scenes, 
+                divine portraits, and historical narratives. Each piece was more than art; it was 
+                a cultural document, a spiritual meditation, a bridge between the ancient and eternal.
               </p>
               
               <p>
-                Today, his legacy continues through this curated gallery, ensuring that future 
-                generations can experience the beauty, wisdom, and spiritual depth embedded in 
-                traditional Indian art forms.
+                His work with Cheriyal scroll paintings didn't just revive an art form—it earned 
+                the tradition prestigious Geographical Indication recognition in 2008, ensuring 
+                these sacred stories would continue to be told for generations to come.
               </p>
             </div>
 
@@ -147,11 +148,11 @@ const AboutSection = () => {
         <div className="mt-20 text-center">
           <div className="bg-gradient-to-r from-primary/5 via-accent/5 to-highlight/5 rounded-2xl p-12">
             <blockquote className="text-2xl md:text-3xl font-serif italic text-foreground mb-6">
-              "Art is not what you see, but what you make others see. Through traditional Indian art, 
-              we preserve not just techniques, but the soul of our ancestors."
+              "The Cheriyal scrolls, the Kakatiya sculptures, the folk tales of Telangana - 
+              these are not just art forms, they are the breathing memory of our civilization."
             </blockquote>
             <p className="text-lg text-muted-foreground">
-              — Traditional Indian Art Philosophy
+              — Kondapalli Seshagiri Rao, during the revival of Cheriyal painting, 1990s
             </p>
           </div>
         </div>

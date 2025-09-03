@@ -8,10 +8,11 @@ const Navigation = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
   const navItems = [
-    { label: "Memorial", href: "#home" },
+    { label: "Memorial", href: "#hero" },
     { label: "His Journey", href: "#story" },
     { label: "Collection", href: "#gallery" },
     { label: "Legacy", href: "#about" },
+    { label: "Honours", href: "#awards" },
     { label: "Connect", href: "#contact" },
   ];
 
@@ -36,7 +37,7 @@ const Navigation = () => {
               <h1 className="text-xl font-serif font-semibold text-foreground">
                 Sheshagiri Rao Memorial
               </h1>
-              <p className="text-xs text-muted-foreground">Master Artist · 1935-2010</p>
+              <p className="text-xs text-muted-foreground">Master Artist · 1924-2023</p>
             </div>
           </div>
 

@@ -5,44 +5,63 @@ import { Calendar, Heart, Palette, Star } from "lucide-react";
 const StorySection = () => {
   const timeline = [
     {
-      year: "1935",
-      event: "Born in Kondapalli Village",
-      description: "In the artistic heartland of Andhra Pradesh, where tradition flows like sacred water"
+      year: "1924",
+      event: "Birth of a Visionary",
+      description: "Born on 27th January in Penugonda village near Warangal, Telangana, to Gopal Rao and Ramachudamma. The sacred soil of Telangana nurtured his artistic soul from birth."
     },
     {
-      year: "1955",
-      event: "First Exhibition",
-      description: "Unveiled his early works depicting village life and mythological tales"
+      year: "1940s",
+      event: "Foundation of Learning",
+      description: "Studied at School of Arts and Crafts in Hyderabad under the patronage of Nawab Mehdi Nawaz Jung, where his artistic foundation was laid with traditional techniques."
     },
     {
-      year: "1970",
+      year: "1950s",
+      event: "Santiniketan Enlightenment",
+      description: "Advanced training at Santiniketan's Kala Bhavan under luminaries Nandalal Bose and Jalaluddin, absorbing Tagore's Swaraj-art philosophy that would guide his lifelong mission."
+    },
+    {
+      year: "1961",
       event: "National Recognition",
-      description: "Awarded for preserving traditional Indian art forms and cultural heritage"
+      description: "Designed the celebrated Andhra Pradesh tableau for Republic Day, earning praise from Prime Minister Nehru. A moment when regional art touched the national consciousness."
     },
     {
-      year: "1985",
-      event: "Master Teacher",
-      description: "Established art school to pass knowledge to future generations"
+      year: "1969",
+      event: "Artistic Mastery",
+      description: "Second Republic Day tableau design praised by Indira Gandhi. By now, he had pioneered the aqua texture technique, creating over 1,000 masterpieces spanning mythology to rural life."
     },
     {
-      year: "2010",
+      year: "1970s-84",
+      event: "The Great Teacher",
+      description: "Served as Head of Department at JNTU College of Arts & Crafts, mentoring generations of artists while advocating for faculty rights and cultural preservation."
+    },
+    {
+      year: "1984-2008",
+      event: "Cultural Revival",
+      description: "Post-retirement, dedicated himself to reviving Cheriyal scroll painting tradition, leading to its prestigious GI (Geographical Indication) recognition in 2008."
+    },
+    {
+      year: "2023-25",
       event: "Eternal Legacy",
-      description: "Transitioned to eternal rest, leaving behind a treasure of cultural wisdom"
+      description: "Centenary celebrations with 'Reviving the Roots' retrospective at State Art Gallery, Hyderabad, featuring 290 works. His legacy lives on as a beacon of cultural preservation."
     }
   ];
 
   const quotes = [
     {
-      quote: "Every canvas is a prayer, every color a devotion to the divine spirit that flows through all creation.",
-      context: "From his journal, 1978"
+      quote: "Art is not mere decoration, but the soul's expression of cultural truth. Through my brush, I preserve the eternal stories of our land.",
+      context: "From his lectures on All India Radio"
     },
     {
-      quote: "The artist's duty is not to create beauty, but to reveal the beauty that already exists in our culture.",
-      context: "Speaking to students, 1985"
+      quote: "The Cheriyal scrolls, the Kakatiya sculptures, the folk tales of Telangana - these are not just art forms, they are the breathing memory of our civilization.",
+      context: "During the revival of Cheriyal painting, 1990s"
     },
     {
-      quote: "When I paint, I am not alone. My ancestors guide my brush, my culture speaks through my colors.",
-      context: "Interview with Art Today Magazine, 1995"
+      quote: "Every mythological painting is a meditation, every rural scene a prayer to the divine that dwells in simplicity.",
+      context: "Speaking to students at JNTU, 1980"
+    },
+    {
+      quote: "The aqua texture technique allows colors to flow like consciousness itself - blending the earthly with the ethereal, just as our culture does.",
+      context: "Explaining his pioneering technique, 1970"
     }
   ];
 
@@ -52,11 +71,15 @@ const StorySection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-6">
-            The Master's Journey
+            Kondapalli Seshagiri Rao
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A life dedicated to preserving the sacred traditions of Indian art, 
-            weaving stories of devotion, culture, and timeless beauty.
+          <h3 className="text-2xl font-serif text-primary mb-4">
+            Artist • Cultural Revivalist • Freedom Fighter
+          </h3>
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            A century-long journey of artistic excellence and cultural preservation. From the villages of Telangana 
+            to the national stage, his life was dedicated to keeping the sacred flame of Indian artistic traditions 
+            burning bright for future generations.
           </p>
         </div>
 
@@ -108,7 +131,7 @@ const StorySection = () => {
           <h3 className="text-3xl font-serif font-semibold text-center text-foreground mb-12">
             In His Words
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {quotes.map((item, index) => (
               <Card key={index} className="artwork-card bg-card/50 backdrop-blur-sm">
                 <CardContent className="p-6">
@@ -137,10 +160,10 @@ const StorySection = () => {
               <CardContent className="p-8 text-center">
                 <Palette className="h-12 w-12 text-primary mx-auto mb-4" />
                 <h4 className="text-xl font-serif font-semibold text-foreground mb-3">
-                  Cultural Preservation
+                  Pioneering Innovation
                 </h4>
                 <p className="text-muted-foreground leading-relaxed">
-                  Dedicated his life to preserving traditional Indian art forms for future generations
+                  Creator of the aqua texture technique, blending Chinese and Japanese influences with Indian sensibilities. Over 1,000 masterpieces span mythology, rural life, and portraits.
                 </p>
               </CardContent>
             </Card>
@@ -149,10 +172,10 @@ const StorySection = () => {
               <CardContent className="p-8 text-center">
                 <Star className="h-12 w-12 text-accent mx-auto mb-4" />
                 <h4 className="text-xl font-serif font-semibold text-foreground mb-3">
-                  Spiritual Expression
+                  Cultural Revival
                 </h4>
                 <p className="text-muted-foreground leading-relaxed">
-                  Every brushstroke was a meditation, every canvas a prayer to the divine
+                  Led the revival of Cheriyal scroll painting, earning it GI recognition. His work preserves Telangana's folk traditions and Kakatiya temple art for posterity.
                 </p>
               </CardContent>
             </Card>
@@ -161,10 +184,10 @@ const StorySection = () => {
               <CardContent className="p-8 text-center">
                 <Heart className="h-12 w-12 text-highlight mx-auto mb-4" />
                 <h4 className="text-xl font-serif font-semibold text-foreground mb-3">
-                  Community Impact
+                  Educational Legacy
                 </h4>
                 <p className="text-muted-foreground leading-relaxed">
-                  Mentored countless artists and established foundations for cultural education
+                  As Head of Department at JNTU, he mentored generations of artists while advocating for faculty rights. His teachings continue through disciples worldwide.
                 </p>
               </CardContent>
             </Card>
