@@ -43,19 +43,19 @@ const ContactSection = () => {
     {
       icon: <Mail className="h-6 w-6 text-primary" />,
       title: "Email",
-      details: "heritage.gallery@example.com",
+      details: "ExampleEmail@example.com",
       description: "For general inquiries and artwork purchases"
     },
     {
       icon: <Phone className="h-6 w-6 text-primary" />,
       title: "Phone",
-      details: "+91 98765 43210",
+      details: "+91 123456789",
       description: "Available Monday to Saturday, 10 AM - 6 PM"
     },
     {
       icon: <MapPin className="h-6 w-6 text-primary" />,
       title: "Location",
-      details: "Cultural Heritage Center, New Delhi",
+      details: "Kondapalli Art Center, Hyderabad, India",
       description: "Private viewings by appointment only"
     }
   ];
