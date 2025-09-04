@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, Play } from "lucide-react";
 import { artworks } from "@/data/artworks";
-import heroImage from "@/assets/hero-banner.jpg";
+import heroImage from "@/assets/Paintings-Images/Photo2.jpg";
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -14,7 +14,7 @@ const HeroSection = () => {
       subtitle: "Master of Indian Cultural Art",
       description: "In loving memory of an artist whose life was devoted to preserving India's sacred artistic traditions.",
       image: heroImage,
-      accent: "1935 - 2010"
+      accent: "1924 - 2011"
     },
     {
       id: 2,
@@ -128,11 +128,11 @@ const HeroSection = () => {
                       <Button 
                         variant="outline" 
                         size="lg" 
-                        className="hero-btn-secondary"
+                        className="hero-btn-primary group"
                         onClick={() => document.querySelector('#story')?.scrollIntoView({ behavior: 'smooth' })}
                         aria-label="Navigate to master's story section"
                       >
-                        His Journey
+                        Journey
                       </Button>
                     </div>
                   </>

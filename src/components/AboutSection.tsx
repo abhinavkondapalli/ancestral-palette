@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Palette, Heart, Award, Users } from "lucide-react";
+import photoImg from "@/assets/Paintings-Images/Photo.avif";
 
 const AboutSection = () => {
   const achievements = [
@@ -104,19 +105,22 @@ const AboutSection = () => {
 
           <div className="relative">
             <div className="bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl p-8">
-              <div className="aspect-square bg-gradient-to-br from-primary to-highlight rounded-xl shadow-2xl relative overflow-hidden">
-                <div className="absolute inset-4 bg-background rounded-lg flex items-center justify-center">
-                  <div className="text-center">
-                    <Palette className="h-16 w-16 text-primary mx-auto mb-4" />
-                    <h4 className="text-xl font-serif font-bold text-foreground mb-2">
-                      Master Artist
-                    </h4>
-                    <p className="text-muted-foreground text-sm">
-                      Dedicated to preserving<br />
-                      India's artistic heritage
-                    </p>
-                  </div>
-                </div>
+              <div className="aspect-square rounded-xl shadow-2xl relative overflow-hidden flex flex-col justify-end">
+                <img
+                  src={photoImg}
+                  alt="Master Artist"
+                  className="w-full h-full object-cover"
+                /*<div className="absolute bottom-0 left-0 right-0 rounded-b-xl p-4 text-center">
+                  <Palette className="h-16 w-16 text-primary mx-auto mb-2" />
+                  <h4 className="text-xl font-serif font-bold text-foreground mb-1">
+                    Master Artist
+                  </h4>
+                  <p className="text-muted-foreground text-sm">
+                    Dedicated to preserving<br />
+                    India's artistic heritage
+                  </p>
+                </div>*/
+                />
               </div>
             </div>
           </div>

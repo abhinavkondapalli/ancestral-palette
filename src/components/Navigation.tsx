@@ -9,7 +9,7 @@ const Navigation = () => {
 
   const navItems = [
     { label: "Memorial", href: "#hero" },
-    { label: "His Journey", href: "#story" },
+    { label: "Journey", href: "#story" },
     { label: "Collection", href: "#gallery" },
     { label: "Legacy", href: "#about" },
     { label: "Honours", href: "#awards" },
