@@ -58,7 +58,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="relative h-screen overflow-hidden">
+    <section id="home" className="relative h-screen overflow-hidden hero-artistic-frame">
       {/* Background Images */}
       {slides.map((slide, index) => (
         <div
@@ -67,17 +67,26 @@ const HeroSection = () => {
             index === currentSlide ? 'opacity-100' : 'opacity-0'
           }`}
         >
-          <img
-            src={slide.image}
-            alt={`${slide.title} - ${slide.description}`}
-            className="w-full h-full object-cover"
-            loading={index === 0 ? "eager" : "lazy"}
-            onError={(e) => {
-              const target = e.target as HTMLImageElement;
-              target.src = '/placeholder.svg';
-              target.alt = 'Artwork image unavailable';
-            }}
-          />
+          <div className="relative w-full h-full">
+            <img
+              src={slide.image}
+              alt={`${slide.title} - ${slide.description}`}
+              className="w-full h-full object-contain lg:object-cover"
+              style={{
+                objectPosition: 'center center',
+                filter: 'brightness(0.85) contrast(1.15) saturate(1.1)'
+              }}
+              loading={index === 0 ? "eager" : "lazy"}
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.src = '/placeholder.svg';
+                target.alt = 'Artwork image unavailable';
+              }}
+            />
+            {/* Artistic vignette frame */}
+            <div className="absolute inset-0 bg-gradient-to-r from-background/20 via-transparent to-background/20"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-background/10"></div>
+          </div>
           <div className="absolute inset-0 overlay-gradient"></div>
         </div>
       ))}

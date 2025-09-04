@@ -130,6 +130,12 @@
   body {
     @apply bg-background text-foreground font-sans;
     font-family: 'Inter', sans-serif;
+    background-image: 
+      radial-gradient(circle at 20% 80%, hsl(var(--primary)) 0%, transparent 20%),
+      radial-gradient(circle at 80% 20%, hsl(var(--accent)) 0%, transparent 15%),
+      linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
+    background-attachment: fixed;
+    background-size: 100% 100%, 100% 100%, 100% 100%;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -219,6 +225,59 @@
     right: 0;
     height: 3px;
     background: var(--gradient-hero);
+  }
+
+  /* Subtle Cultural Background Patterns */
+  .cultural-pattern {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cultural-pattern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 25% 25%, hsl(var(--primary) / 0.03) 0%, transparent 25%),
+      radial-gradient(circle at 75% 75%, hsl(var(--accent) / 0.02) 0%, transparent 25%),
+      linear-gradient(45deg, hsl(var(--highlight) / 0.01) 0%, transparent 1px),
+      linear-gradient(-45deg, hsl(var(--contrast) / 0.01) 0%, transparent 1px);
+    background-size: 100px 100px, 150px 150px, 20px 20px, 20px 20px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Enhanced Hero Section Backgrounds */
+  .hero-artistic-frame {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-artistic-frame::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(ellipse at center, transparent 30%, hsl(var(--foreground) / 0.4) 70%),
+      linear-gradient(45deg, hsl(var(--primary) / 0.1) 0%, transparent 50%, hsl(var(--accent) / 0.1) 100%);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* Museum-like Card Styling */
+  .museum-card {
+    background: linear-gradient(135deg, hsl(var(--card)) 0%, hsl(var(--muted)) 100%);
+    border: 1px solid hsl(var(--border));
+    box-shadow: 
+      0 4px 20px hsl(var(--primary) / 0.08),
+      inset 0 1px 0 hsl(var(--primary-foreground) / 0.1);
+    backdrop-filter: blur(10px);
   }
 }
 

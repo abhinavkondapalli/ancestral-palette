@@ -25,7 +25,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-sm border-b border-border pattern-border">
+    <nav className="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-md border-b border-border pattern-border cultural-pattern">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -37,7 +37,7 @@ const Navigation = () => {
               <h1 className="text-xl font-serif font-semibold text-foreground">
                 Sheshagiri Rao Memorial
               </h1>
-              <p className="text-xs text-muted-foreground">Master Artist · 1924-2023</p>
+              <p className="text-xs text-muted-foreground">Master Artist · 1924-2011</p>
             </div>
           </div>
 
