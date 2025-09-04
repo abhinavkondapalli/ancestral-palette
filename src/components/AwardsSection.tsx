@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Award, BookOpen, Globe, Trophy, Crown, Heart } from "lucide-react";
+import { WatermarkSection } from "@/components/WatermarkBackground";
 
 const AwardsSection = () => {
   const majorAwards = [
@@ -73,7 +74,7 @@ const AwardsSection = () => {
   ];
 
   return (
-    <section id="awards" className="py-20 bg-background">
+    <WatermarkSection id="awards" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -167,7 +168,7 @@ const AwardsSection = () => {
           </div>
         </div>
       </div>
-    </section>
+    </WatermarkSection>
   );
 };
 

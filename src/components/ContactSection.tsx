@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { WatermarkSection } from "@/components/WatermarkBackground";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -60,7 +61,7 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-background">
+    <WatermarkSection id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -220,7 +221,7 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-    </section>
+    </WatermarkSection>
   );
 };
 

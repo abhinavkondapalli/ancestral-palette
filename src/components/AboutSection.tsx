@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Palette, Heart, Award, Users } from "lucide-react";
+import { WatermarkSection } from "@/components/WatermarkBackground";
 import photoImg from "@/assets/Paintings-Images/Photo.avif";
 
 const AboutSection = () => {
@@ -41,7 +42,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-background">
+    <WatermarkSection id="about" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -161,7 +162,7 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-    </section>
+    </WatermarkSection>
   );
 };
 

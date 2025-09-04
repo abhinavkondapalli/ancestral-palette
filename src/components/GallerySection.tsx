@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Search, Filter, Grid, List, Heart, Share2, ZoomIn } from "lucide-react";
 import { artworks, categories, getArtworksByCategory, searchArtworks } from "@/data/artworks";
+import { WatermarkSection } from "@/components/WatermarkBackground";
 
 const GallerySection = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -29,7 +30,7 @@ const GallerySection = () => {
   };
 
   return (
-    <section id="gallery" className="py-20 warm-gradient">
+    <WatermarkSection id="gallery" className="py-20 warm-gradient">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -218,7 +219,7 @@ const GallerySection = () => {
           </div>
         )}
       </div>
-    </section>
+    </WatermarkSection>
   );
 };
 

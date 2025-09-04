@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Heart, Palette, Star } from "lucide-react";
+import { WatermarkSection } from "@/components/WatermarkBackground";
 
 const StorySection = () => {
   const timeline = [
@@ -66,7 +67,7 @@ const StorySection = () => {
   ];
 
   return (
-    <section id="story" className="py-20 warm-gradient">
+    <WatermarkSection id="story" className="py-20 warm-gradient">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -194,7 +195,7 @@ const StorySection = () => {
           </div>
         </div>
       </div>
-    </section>
+    </WatermarkSection>
   );
 };
 
