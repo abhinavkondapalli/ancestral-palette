@@ -127,29 +127,6 @@ const StorySection = () => {
           </div>
         </div>
 
-        {/* Quotes Section */}
-        <div className="mb-20">
-          <h3 className="text-3xl font-serif font-semibold text-center text-foreground mb-12">
-            In His Words
-          </h3>
-          <div className="grid md:grid-cols-2 gap-8">
-            {quotes.map((item, index) => (
-              <Card key={index} className="artwork-card bg-card/50 backdrop-blur-sm">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-3 mb-4">
-                    <Heart className="h-6 w-6 text-highlight mt-1 flex-shrink-0" />
-                    <blockquote className="text-foreground font-serif text-lg leading-relaxed italic">
-                      "{item.quote}"
-                    </blockquote>
-                  </div>
-                  <p className="text-sm text-muted-foreground text-right">
-                    — {item.context}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
 
         {/* Values & Impact */}
         <div className="text-center">

@@ -187,7 +187,14 @@ const GallerySection = () => {
                    {artwork.cultural_significance}
                  </p>
                 
-                <Button className="w-full" variant="outline">
+                <Button 
+                  className="w-full" 
+                  variant="outline"
+                  onClick={() => {
+                    const contactSection = document.getElementById('contact');
+                    contactSection?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
                   Enquire to Collect
                 </Button>
               </CardContent>

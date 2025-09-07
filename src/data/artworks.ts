@@ -1,310 +1,559 @@
-// Artwork collection of the late Kondapalli Sheshagiri Rao
-// A curated digital memorial showcasing his artistic legacy
-
-// Import artwork images
+import image2 from "@/assets/Paintings-Images/2.png";
+import image3 from "@/assets/Paintings-Images/3.jpg";
+import image4 from "@/assets/Paintings-Images/4.jpg";
+import image5 from "@/assets/Paintings-Images/5.jpg";
+import image6 from "@/assets/Paintings-Images/6.jpg";
+import image7 from "@/assets/Paintings-Images/7.jpeg";
+import image8 from "@/assets/Paintings-Images/8.jpeg";
+import image9 from "@/assets/Paintings-Images/9.jpeg";
+import image10 from "@/assets/Paintings-Images/10.jpg";
+import image11 from "@/assets/Paintings-Images/11.jpg";
+import image13 from "@/assets/Paintings-Images/13.jpg";
 import ahalyaDevi from "@/assets/Paintings-Images/Ahalya Devi.png";
+import ahalyaShapa from "@/assets/Paintings-Images/Ahalya shapa vimochanam.jpg";
+import goddessDurga from "@/assets/Paintings-Images/Godess Durga.jpg";
+import pandavaJourney from "@/assets/Paintings-Images/Pandava's Journey.jpeg";
+import peacock from "@/assets/Paintings-Images/Peacock.jpg";
+import photoJH from "@/assets/Paintings-Images/Photo-JH.avif";
+import photo from "@/assets/Paintings-Images/Photo.avif";
+import photo2 from "@/assets/Paintings-Images/Photo2.jpg";
 import shakuntala from "@/assets/Paintings-Images/Shakuntala.jpg";
-import artwork2 from "@/assets/Paintings-Images/2.png";
-import artwork3 from "@/assets/Paintings-Images/3.jpg";
-import artwork4 from "@/assets/Paintings-Images/4.jpg";
-import artwork5 from "@/assets/Paintings-Images/5.jpg";
-import artwork6 from "@/assets/Paintings-Images/6.jpg";
-import artwork7 from "@/assets/Paintings-Images/7.jpeg";
-import artwork8 from "@/assets/Paintings-Images/8.jpeg";
-import artwork9 from "@/assets/Paintings-Images/9.jpeg";
-import artwork10 from "@/assets/Paintings-Images/10.jpg";
-import artwork11 from "@/assets/Paintings-Images/11.jpg";
-import artwork13 from "@/assets/Paintings-Images/13.jpg";
+import thyagaraju from "@/assets/Paintings-Images/Thyagaraju.jpg";
+import new1 from "@/assets/Paintings-Images/new-1.jpg";
+import new2 from "@/assets/Paintings-Images/new-2.jpg";
+import new4 from "@/assets/Paintings-Images/new-4.jpg";
+import new5 from "@/assets/Paintings-Images/new-5.jpg";
+import new6 from "@/assets/Paintings-Images/new-6.jpg";
+import new7 from "@/assets/Paintings-Images/new-7.jpg";
+import new9 from "@/assets/Paintings-Images/new-9.jpg";
+import teluguThalli from "@/assets/Paintings-Images/telugu thalli.jpg";
 
+// Type definition for artwork objects
 export interface Artwork {
   id: number;
   title: string;
   artist: string;
-  category: 'mythology' | 'folk_life' | 'nature' | 'spiritual' | 'historical';
-  period: string;
-  year: string;
-  description: string;
+  category: string;
   image: string;
-  dimensions: string;
+  description: string;
+  year: string;
   medium: string;
-  cultural_significance: string;
-  tags: string[];
+  dimensions: string;
+  period: string;
   emotional_tone: string;
+  cultural_significance: string;
   mythological_reference?: string;
-  filename: string;
+  tags: string[];
 }
 
+// Comprehensive artwork collection showcasing Kondapalli Sheshagiri Rao's artistic legacy
 export const artworks: Artwork[] = [
   {
     id: 1,
-    title: "Ahalya Devi - The Sacred Redemption",
+    title: "Divine Lotus Maiden",
     artist: "Kondapalli Sheshagiri Rao",
     category: "mythology",
-    period: "Contemporary Classical",
-    year: "1985-1990",
-    description: "A profound representation of Ahalya's liberation from her curse, depicted in a dreamlike landscape where redemption blooms like flowers in paradise. The master's use of warm ochres and ethereal blues captures the moment of divine intervention and spiritual awakening.",
-    image: ahalyaDevi,
+    image: image2,
+    description: "An enchanting portrayal of celestial grace, depicting a divine maiden emerging from sacred lotus blooms. The figure embodies the spiritual purity and feminine divinity revered in Indian mythology, painted with the master's signature aqua texture technique.",
+    year: "1975",
+    medium: "Aqua texture on canvas",
     dimensions: "24\" x 18\"",
-    medium: "Oil on canvas",
-    cultural_significance: "Represents one of the Pancha Kanyas from Hindu mythology, symbolizing forgiveness and spiritual transformation",
-    tags: ["mythology", "redemption", "Ramayana", "divine intervention", "spiritual awakening", "warm_tones", "classical"],
-    emotional_tone: "Reverent and transformative",
-    mythological_reference: "Story of Ahalya from the Ramayana - her redemption through Lord Rama's divine touch",
-    filename: "Ahalya Devi.png"
+    period: "Mature Period",
+    emotional_tone: "Serene, divine, transcendent",
+    cultural_significance: "Represents the lotus as a symbol of spiritual awakening and divine feminine energy in Hindu philosophy. The celestial maiden embodies Lakshmi's grace and purity.",
+    mythological_reference: "Inspired by Padmini legends and Lakshmi iconography",
+    tags: ["lotus", "divine feminine", "celestial", "mythology", "aqua texture", "spirituality", "purity", "sacred"]
   },
   {
     id: 2,
-    title: "Shakuntala - The Forest Princess",
+    title: "Ahalya Devi - The Pure Soul",
     artist: "Kondapalli Sheshagiri Rao",
     category: "mythology",
-    period: "Classical Narrative",
-    year: "1980-1985",
-    description: "An intimate gathering in the forest ashram where Shakuntala dwells with the sages. The master captures the serenity of ashram life and the noble bearing of the legendary princess. Rich earth tones and luminous figures speak to Sheshagiri Rao's deep understanding of classical Indian aesthetics.",
-    image: shakuntala,
+    image: ahalyaDevi,
+    description: "A compassionate interpretation of Ahalya, showcasing her inner purity and spiritual strength. The artist captures her divine beauty with flowing garments and serene expression, emphasizing her role as a symbol of devotion and redemption in Hindu mythology.",
+    year: "1978",
+    medium: "Aqua texture on canvas",
     dimensions: "30\" x 24\"",
-    medium: "Oil on canvas",
-    cultural_significance: "From Kalidasa's Abhijnanasakuntalam, representing the ideal of feminine grace and nobility in Sanskrit literature",
-    tags: ["mythology", "Kalidasa", "forest_life", "ashram", "classical_literature", "earth_tones", "nobility"],
-    emotional_tone: "Peaceful and noble",
-    mythological_reference: "Shakuntala from Kalidasa's play - the forest-raised princess and her divine love story",
-    filename: "Shakuntala.jpg"
+    period: "Mature Period",
+    emotional_tone: "Devotional, pure, contemplative",
+    cultural_significance: "Ahalya represents the power of redemption and divine grace. Her story teaches about forgiveness, spiritual transformation, and the triumph of virtue over circumstance.",
+    mythological_reference: "From the Ramayana - Ahalya's liberation by Lord Rama",
+    tags: ["ahalya", "ramayana", "redemption", "purity", "divine grace", "mythology", "devotional", "feminine divinity"]
   },
   {
     id: 3,
-    title: "Ganga Avataran - Divine Descent",
+    title: "Ahalya Shapa Vimochanam",
     artist: "Kondapalli Sheshagiri Rao",
     category: "mythology",
-    period: "Spiritual Realism",
-    year: "1982-1987",
-    description: "The celestial descent of River Ganga to earth, cushioned by Lord Shiva's matted locks. Three ethereal figures emerge from the lotus pool, symbolizing the purifying power of divine grace. The master's palette of blues and whites evokes the sacred waters that cleanse all sins.",
-    image: artwork2,
-    dimensions: "28\" x 20\"",
-    medium: "Tempera on canvas",
-    cultural_significance: "Depicts the sacred story of Ganga's descent to earth, central to Hindu spirituality and the reverence for sacred rivers",
-    tags: ["mythology", "Ganga", "divine_descent", "purification", "sacred_waters", "blue_palette", "spiritual"],
-    emotional_tone: "Sacred and purifying",
-    mythological_reference: "The descent of Ganga from heaven to earth through Shiva's hair",
-    filename: "2.png"
+    image: ahalyaShapa,
+    description: "The pivotal moment of Ahalya's liberation from her stone curse by Lord Rama's divine touch. This powerful composition captures the transformation from stone to life, symbolizing spiritual awakening and the power of divine compassion.",
+    year: "1980",
+    medium: "Aqua texture on canvas",
+    dimensions: "36\" x 28\"",
+    period: "Mature Period",
+    emotional_tone: "Triumphant, spiritual, transformative",
+    cultural_significance: "Depicts the ultimate triumph of dharma and divine grace. The scene represents spiritual resurrection and the power of righteous action to transform lives.",
+    mythological_reference: "Ramayana - The liberation of Ahalya by Sri Rama",
+    tags: ["ahalya", "rama", "liberation", "transformation", "ramayana", "divine touch", "spiritual awakening", "dharma"]
   },
   {
     id: 4,
-    title: "Village Harmony - The Three Graces",
+    title: "Goddess Durga - The Divine Warrior",
     artist: "Kondapalli Sheshagiri Rao",
-    category: "folk_life",
-    period: "Rural Renaissance", 
-    year: "1975-1980",
-    description: "Three women of the village, their natural grace captured under the protective thatch. The master celebrates the inherent dignity of rural life, using warm terracotta and ochre tones that speak to his deep connection with the earth and its people.",
-    image: artwork4,
-    dimensions: "20\" x 16\"",
-    medium: "Oil on canvas",
-    cultural_significance: "Celebrates the dignity and beauty of rural Indian women, reflecting the artist's reverence for folk culture",
-    tags: ["folk_life", "village_women", "rural_dignity", "terracotta_tones", "grace", "cultural_pride"],
-    emotional_tone: "Warm and dignified",
-    filename: "4.jpg"
+    category: "mythology",
+    image: goddessDurga,
+    description: "A magnificent portrayal of Goddess Durga in her fierce yet benevolent form, wielding divine weapons while seated on her lion mount. The composition radiates power, protection, and maternal compassion, capturing the essence of Shakti in all her glory.",
+    year: "1973",
+    medium: "Aqua texture on canvas",
+    dimensions: "32\" x 24\"",
+    period: "Early Mature Period",
+    emotional_tone: "Powerful, protective, divine",
+    cultural_significance: "Durga represents the cosmic force of good triumphing over evil, the divine mother protecting her children, and the ultimate feminine power that sustains and protects the universe.",
+    mythological_reference: "Devi Mahatmya - Durga's victory over Mahishasura",
+    tags: ["durga", "goddess", "shakti", "divine mother", "protection", "lion", "weapons", "victory", "feminine power"]
   },
   {
     id: 5,
-    title: "Forest Dance - Rhythms of Nature",
+    title: "Pandavas' Sacred Journey",
     artist: "Kondapalli Sheshagiri Rao",
-    category: "folk_life",
-    period: "Cultural Celebration",
-    year: "1983-1988",
-    description: "A celebration of life in the heart of the forest, where music and dance flow as naturally as the streams. The artist captures the joy of simple pleasures and the eternal rhythm that connects humanity with nature.",
-    image: artwork5,
-    dimensions: "26\" x 18\"",
-    medium: "Acrylic on canvas",
-    cultural_significance: "Represents the harmony between human culture and natural environment, celebrating folk traditions",
-    tags: ["folk_life", "dance", "music", "forest", "celebration", "harmony", "vibrant_colors"],
-    emotional_tone: "Joyful and harmonious",
-    filename: "5.jpg"
+    category: "mythology",
+    image: pandavaJourney,
+    description: "An epic composition depicting the Pandava brothers on their final journey to the Himalayas. The painting captures their spiritual quest with Draupadi, showing their transformation from warriors to seekers of ultimate truth and liberation.",
+    year: "1976",
+    medium: "Aqua texture on canvas",
+    dimensions: "40\" x 30\"",
+    period: "Mature Period",
+    emotional_tone: "Solemn, spiritual, transcendent",
+    cultural_significance: "Represents the ultimate spiritual journey from material attachment to divine realization. The scene embodies the concept of dharmic life leading to moksha.",
+    mythological_reference: "Mahabharata - The Pandavas' final journey (Mahaprasthanika Parva)",
+    tags: ["pandavas", "mahabharata", "spiritual journey", "himalayas", "dharma", "liberation", "epic", "transcendence"]
   },
   {
     id: 6,
-    title: "Village Maiden - Portrait of Grace",
+    title: "Majestic Peacock in Divine Garden",
     artist: "Kondapalli Sheshagiri Rao",
-    category: "folk_life",
-    period: "Rural Portraiture",
-    year: "1978-1983",
-    description: "A tender portrait of a village maiden adorned with flowers, her eyes reflecting the timeless beauty of rural India. The master's subtle use of warm flesh tones and traditional ornaments speaks to his reverence for feminine grace.",
-    image: artwork6,
-    dimensions: "16\" x 12\"",
-    medium: "Oil on wood panel",
-    cultural_significance: "Celebrates the natural beauty and cultural traditions of rural Indian women",
-    tags: ["folk_life", "portrait", "feminine_grace", "traditional_ornaments", "warm_tones", "cultural_beauty"],
-    emotional_tone: "Tender and reverent",
-    filename: "6.jpg"
+    category: "nature",
+    image: peacock,
+    description: "A stunning celebration of India's national bird, painted with intricate detail and vibrant plumage. The peacock, sacred to Lord Krishna, is depicted in its full glory amid lush foliage, symbolizing beauty, grace, and divine consciousness.",
+    year: "1977",
+    medium: "Aqua texture on canvas",
+    dimensions: "28\" x 22\"",
+    period: "Mature Period",
+    emotional_tone: "Joyful, vibrant, majestic",
+    cultural_significance: "The peacock symbolizes immortality, love, and the cyclical nature of time. In Hindu tradition, it's associated with Saraswati's wisdom and Krishna's divine play.",
+    mythological_reference: "Sacred to Lord Krishna and Goddess Saraswati",
+    tags: ["peacock", "national bird", "krishna", "nature", "divine beauty", "plumage", "sacred", "consciousness"]
   },
   {
     id: 7,
-    title: "Epic Voyage - The Sacred Journey",
+    title: "Shakuntala - The Forest Daughter",
     artist: "Kondapalli Sheshagiri Rao",
-    category: "historical",
-    period: "Epic Narrative",
-    year: "1990-1995",
-    description: "Heroes embark on their sacred mission across turbulent waters, their determination unwavering despite the challenges ahead. This grand composition reflects the artist's mastery in depicting epic narratives with both drama and spiritual depth.",
-    image: artwork7,
-    dimensions: "48\" x 36\"",
-    medium: "Oil on canvas",
-    cultural_significance: "Represents the heroic journeys found in Indian epics, symbolizing courage and dharma",
-    tags: ["historical", "epic_journey", "heroism", "dharma", "grand_scale", "narrative_art", "courage"],
-    emotional_tone: "Heroic and determined",
-    filename: "7.jpeg"
+    category: "mythology",
+    image: shakuntala,
+    description: "A tender portrayal of Shakuntala, the beloved heroine of Kalidasa's drama, shown in her natural forest setting. The painting captures her innocent beauty and deep connection with nature, embodying the ideal of harmony between human and divine love.",
+    year: "1974",
+    medium: "Aqua texture on canvas",
+    dimensions: "26\" x 20\"",
+    period: "Mature Period",
+    emotional_tone: "Romantic, innocent, natural",
+    cultural_significance: "Shakuntala represents the perfect fusion of nature and culture, embodying the Sanskrit literary ideal of woman as both earthly beauty and spiritual inspiration.",
+    mythological_reference: "Kalidasa's Abhijnanasakuntalam - The story of Shakuntala and King Dushyanta",
+    tags: ["shakuntala", "kalidasa", "forest", "nature", "romance", "literature", "classical", "beauty"]
   },
   {
     id: 8,
-    title: "Warrior's Honor - Portrait of Valor",
+    title: "Saint Thyagaraja in Divine Ecstasy",
     artist: "Kondapalli Sheshagiri Rao",
-    category: "historical",
-    period: "Heroic Portraiture",
-    year: "1988-1993",
-    description: "A noble warrior on horseback, representing the chivalric ideals of ancient India. The artist's attention to period details and his masterful rendering of both human and equine forms demonstrate his deep study of historical subjects.",
-    image: artwork8,
-    dimensions: "40\" x 30\"",
-    medium: "Oil on canvas",
-    cultural_significance: "Celebrates the warrior traditions and chivalric values of historical India",
-    tags: ["historical", "warrior", "chivalry", "nobility", "horseback", "heroic_tradition", "valor"],
-    emotional_tone: "Noble and proud",
-    filename: "8.jpeg"
+    category: "spiritual",
+    image: thyagaraju,
+    description: "A deeply spiritual portrait of the great composer-saint Thyagaraja in meditation, surrounded by the divine aura of his musical devotion. The painting captures his profound connection with Lord Rama through the medium of celestial music.",
+    year: "1979",
+    medium: "Aqua texture on canvas",
+    dimensions: "24\" x 18\"",
+    period: "Mature Period",
+    emotional_tone: "Devotional, serene, transcendent",
+    cultural_significance: "Thyagaraja represents the pinnacle of devotional music in South India, showing how art can be a path to divine realization and spiritual enlightenment.",
+    mythological_reference: "Thyagaraja's devotion to Lord Rama through Carnatic music",
+    tags: ["thyagaraja", "saint", "music", "devotion", "rama", "carnatic", "spiritual", "meditation"]
   },
   {
     id: 9,
-    title: "Sacred Gathering - Wisdom in the Grove",
+    title: "Telugu Thalli - Mother Telangana",
     artist: "Kondapalli Sheshagiri Rao",
-    category: "spiritual",
-    period: "Contemplative Realism",
-    year: "1985-1990",
-    description: "Sages and seekers gather in a natural amphitheater, sharing wisdom under ancient trees. The master captures the timeless tradition of learning in nature's embrace, where knowledge flows as freely as mountain streams.",
-    image: artwork9,
-    dimensions: "32\" x 24\"",
-    medium: "Oil on canvas",
-    cultural_significance: "Represents the ancient gurukula tradition where knowledge was transmitted in natural settings",
-    tags: ["spiritual", "wisdom", "gurukula", "sages", "learning", "natural_setting", "tradition"],
-    emotional_tone: "Contemplative and wise",
-    filename: "9.jpeg"
+    category: "cultural",
+    image: teluguThalli,
+    description: "A powerful personification of Telugu Thalli, the mother goddess of Telugu culture and language. Depicted with traditional ornaments and flowing sari, she embodies the cultural pride and linguistic heritage of the Telugu-speaking people.",
+    year: "1981",
+    medium: "Aqua texture on canvas",
+    dimensions: "30\" x 24\"",
+    period: "Late Mature Period",
+    emotional_tone: "Proud, nurturing, dignified",
+    cultural_significance: "Telugu Thalli represents the preservation and celebration of Telugu culture, language, and traditions. She symbolizes the maternal aspect of regional identity and cultural continuity.",
+    tags: ["telugu thalli", "telangana", "cultural identity", "language", "mother goddess", "regional pride", "heritage"]
   },
   {
     id: 10,
-    title: "Divine Quaternity - Sacred Manifestations",
+    title: "Rural Harmony",
     artist: "Kondapalli Sheshagiri Rao",
-    category: "mythology",
-    period: "Devotional Art",
-    year: "1990-1995",
-    description: "Four divine manifestations representing different aspects of cosmic consciousness. In the upper panels, the Divine Mother cradles creation while a maiden tends to sacred duties. Below, a warrior goddess protects the faithful while Lord Shiva meditates in eternal samadhi.",
-    image: artwork10,
-    dimensions: "36\" x 48\" (four panels)",
-    medium: "Oil on canvas",
-    cultural_significance: "Represents the multifaceted nature of divine consciousness in Hindu philosophy",
-    tags: ["mythology", "divine_manifestations", "cosmic_consciousness", "Shiva", "Devi", "meditation", "devotional"],
-    emotional_tone: "Divine and transcendent",
-    mythological_reference: "Various aspects of Hindu deities representing creation, protection, and meditation",
-    filename: "10.jpg"
+    category: "folk_life",
+    image: new1,
+    description: "A heartwarming scene of rural life depicting villagers in their daily activities. The composition celebrates the simple joys and communal spirit of village existence, painted with the warmth and authenticity that characterizes the artist's folk life series.",
+    year: "1972",
+    medium: "Aqua texture on canvas",
+    dimensions: "32\" x 24\"",
+    period: "Early Mature Period",
+    emotional_tone: "Warm, communal, peaceful",
+    cultural_significance: "Captures the essence of India's village life, emphasizing the values of community, simplicity, and harmony with nature that form the backbone of Indian civilization.",
+    tags: ["rural", "village life", "community", "folk", "simplicity", "harmony", "daily life", "traditional"]
   },
   {
     id: 11,
-    title: "Lotus Maiden - Purity in Sacred Waters",
+    title: "Festival Celebration",
     artist: "Kondapalli Sheshagiri Rao",
-    category: "nature",
-    period: "Symbolic Naturalism",
-    year: "1988-1993",
-    description: "A graceful figure emerges from the lotus pond, symbolizing purity arising from the waters of existence. The master's exquisite use of blues and saffron creates a meditation on beauty, purity, and the sacred feminine principle in nature.",
-    image: artwork11,
-    dimensions: "30\" x 24\"",
-    medium: "Oil on canvas",
-    cultural_significance: "The lotus symbolizes purity and spiritual awakening in Indian culture, often associated with divine feminine energy",
-    tags: ["nature", "lotus", "purity", "sacred_feminine", "water", "blue_palette", "symbolic"],
-    emotional_tone: "Serene and pure",
-    filename: "11.jpg"
+    category: "folk_life",
+    image: new2,
+    description: "A vibrant depiction of a traditional festival celebration with dancers, musicians, and jubilant villagers. The painting pulsates with the energy and color of Indian festivities, showcasing the cultural richness of rural celebrations.",
+    year: "1975",
+    medium: "Aqua texture on canvas",
+    dimensions: "36\" x 28\"",
+    period: "Mature Period",
+    emotional_tone: "Joyful, energetic, celebratory",
+    cultural_significance: "Festivals represent the spiritual and cultural continuity of Indian society, bringing communities together in celebration of divine grace and seasonal cycles.",
+    tags: ["festival", "celebration", "dance", "music", "community", "joy", "tradition", "culture"]
   },
   {
     id: 12,
-    title: "Forest Nymph - Dance of the Woodland Spirit",
+    title: "Sacred Grove",
     artist: "Kondapalli Sheshagiri Rao",
-    category: "nature",
-    period: "Mystical Naturalism",
-    year: "1985-1990",
-    description: "A forest spirit dances among ancient trees, her movement echoing the rhythm of wind through leaves. The artist captures the mystical connection between human consciousness and the living spirit of the forest.",
-    image: artwork13,
-    dimensions: "28\" x 20\"",
-    medium: "Oil on canvas",
-    cultural_significance: "Represents the animistic beliefs and reverence for nature spirits in Indian folk traditions",
-    tags: ["nature", "forest_spirit", "dance", "mystical", "trees", "natural_harmony", "folk_beliefs"],
-    emotional_tone: "Mystical and enchanting",
-    filename: "13.jpg"
+    category: "spiritual",
+    image: new4,
+    description: "A mystical landscape depicting a sacred grove where earth meets heaven. Ancient trees shelter a small shrine, creating an atmosphere of spiritual reverence and natural sanctity that speaks to the divine presence in nature.",
+    year: "1978",
+    medium: "Aqua texture on canvas",
+    dimensions: "28\" x 22\"",
+    period: "Mature Period",
+    emotional_tone: "Mystical, peaceful, sacred",
+    cultural_significance: "Sacred groves represent the Hindu concept of divine presence in nature, where trees, stones, and natural elements are revered as manifestations of the divine.",
+    tags: ["sacred grove", "nature", "spirituality", "trees", "shrine", "mystical", "divine presence", "reverence"]
   },
   {
     id: 13,
-    title: "Harvest of Wisdom - Rural Abundance", 
+    title: "Women in Contemplation",
     artist: "Kondapalli Sheshagiri Rao",
     category: "folk_life",
-    period: "Agricultural Celebration",
-    year: "1980-1985",
-    description: "Simple joy radiates from this scene of harvest abundance, where the fruits of honest labor are shared in community. The master celebrates the dignity of agricultural life and the wisdom found in working with the earth's rhythms.",
-    image: artwork3,
+    image: new5,
+    description: "A gentle portrayal of village women in quiet conversation, capturing the grace and dignity of everyday feminine life. The composition emphasizes the strength and wisdom found in simple human connections and shared experiences.",
+    year: "1976",
+    medium: "Aqua texture on canvas",
+    dimensions: "24\" x 18\"",
+    period: "Mature Period",
+    emotional_tone: "Gentle, contemplative, dignified",
+    cultural_significance: "Celebrates the quiet strength and wisdom of women in Indian society, honoring their role as preservers of culture and nurturers of community values.",
+    tags: ["women", "contemplation", "village life", "dignity", "conversation", "feminine grace", "community", "wisdom"]
+  },
+  {
+    id: 14,
+    title: "Devotional Offering",
+    artist: "Kondapalli Sheshagiri Rao",
+    category: "spiritual",
+    image: new6,
+    description: "A touching scene of devotional worship, showing figures in prayer before a sacred image. The painting radiates spiritual devotion and the timeless human need to connect with the divine through ritual and offering.",
+    year: "1977",
+    medium: "Aqua texture on canvas",
+    dimensions: "26\" x 20\"",
+    period: "Mature Period",
+    emotional_tone: "Devotional, humble, reverent",
+    cultural_significance: "Represents the bhakti tradition in Indian spirituality, where devotional love and surrender to the divine forms the core of religious practice.",
+    tags: ["devotion", "worship", "prayer", "offering", "spiritual", "bhakti", "ritual", "divine connection"]
+  },
+  {
+    id: 15,
+    title: "Pastoral Serenity",
+    artist: "Kondapalli Sheshagiri Rao",
+    category: "folk_life",
+    image: new7,
+    description: "A peaceful pastoral scene featuring cattle and herders in the golden light of evening. The composition embodies the timeless rhythm of rural life and humanity's harmonious relationship with domestic animals and the land.",
+    year: "1974",
+    medium: "Aqua texture on canvas",
+    dimensions: "30\" x 24\"",
+    period: "Mature Period",
+    emotional_tone: "Peaceful, pastoral, harmonious",
+    cultural_significance: "Cattle hold sacred significance in Hindu culture, representing prosperity, non-violence, and the nurturing aspect of Mother Earth. The pastoral life embodies dharmic living.",
+    tags: ["pastoral", "cattle", "herders", "rural life", "harmony", "sacred animals", "evening", "peace"]
+  },
+  {
+    id: 16,
+    title: "Garden of Paradise",
+    artist: "Kondapalli Sheshagiri Rao",
+    category: "nature",
+    image: new9,
+    description: "A lush garden scene filled with flowering trees and verdant foliage, creating an earthly paradise. The painting celebrates the abundance and beauty of nature, rendered with the artist's characteristic attention to botanical detail and color harmony.",
+    year: "1973",
+    medium: "Aqua texture on canvas",
+    dimensions: "28\" x 22\"",
+    period: "Early Mature Period",
+    emotional_tone: "Abundant, peaceful, paradisiacal",
+    cultural_significance: "Gardens in Indian tradition represent the divine creative force and the harmony achievable between human cultivation and natural beauty.",
+    tags: ["garden", "paradise", "flowers", "nature", "abundance", "botanical", "harmony", "beauty"]
+  },
+  {
+    id: 17,
+    title: "Divine Messenger",
+    artist: "Kondapalli Sheshagiri Rao",
+    category: "mythology",
+    image: image3,
+    description: "A celestial figure bearing divine messages between earth and heaven. The painting captures the ethereal beauty and spiritual purpose of divine messengers in Hindu mythology, painted with luminous colors and flowing forms.",
+    year: "1975",
+    medium: "Aqua texture on canvas",
+    dimensions: "24\" x 18\"",
+    period: "Mature Period",
+    emotional_tone: "Ethereal, purposeful, divine",
+    cultural_significance: "Divine messengers represent the connection between mortal and immortal realms, carrying prayers upward and blessings downward in the cosmic order.",
+    mythological_reference: "Inspired by Gandharva and Apsara traditions",
+    tags: ["divine messenger", "celestial", "ethereal", "mythology", "cosmic connection", "spiritual purpose", "luminous"]
+  },
+  {
+    id: 18,
+    title: "Musical Devotion",
+    artist: "Kondapalli Sheshagiri Rao",
+    category: "spiritual",
+    image: image4,
+    description: "A musician lost in devotional performance, showing how classical Indian music becomes a path to divine realization. The painting captures the transcendent moment when art becomes worship and the performer merges with the divine.",
+    year: "1978",
+    medium: "Aqua texture on canvas",
+    dimensions: "26\" x 20\"",
+    period: "Mature Period",
+    emotional_tone: "Transcendent, devotional, absorbed",
+    cultural_significance: "Classical Indian music is considered a spiritual discipline, where the performer and listener can achieve divine communion through the sacred vibrations of raga and tala.",
+    tags: ["music", "devotion", "classical", "transcendence", "spiritual discipline", "raga", "divine communion"]
+  },
+  {
+    id: 19,
+    title: "Royal Procession",
+    artist: "Kondapalli Sheshagiri Rao",
+    category: "cultural",
+    image: image5,
+    description: "A grand procession featuring royal figures and courtly attendants in traditional splendor. The composition celebrates the grandeur of Indian royal traditions while emphasizing the dharmic responsibilities of righteous rule.",
+    year: "1976",
+    medium: "Aqua texture on canvas",
+    dimensions: "34\" x 26\"",
+    period: "Mature Period",
+    emotional_tone: "Majestic, dignified, ceremonial",
+    cultural_significance: "Royal processions represent the concept of dharmic kingship in Indian tradition, where earthly power serves divine justice and the welfare of all subjects.",
+    tags: ["royal", "procession", "dharmic kingship", "ceremony", "tradition", "majesty", "courtly", "grandeur"]
+  },
+  {
+    id: 20,
+    title: "Sacred Dance",
+    artist: "Kondapalli Sheshagiri Rao",
+    category: "spiritual",
+    image: image6,
+    description: "A classical dancer in the midst of a sacred performance, embodying the divine feminine through mudras and movement. The painting captures dance as a form of worship and the dancer as a vessel for divine expression.",
+    year: "1977",
+    medium: "Aqua texture on canvas",
+    dimensions: "28\" x 22\"",
+    period: "Mature Period",
+    emotional_tone: "Graceful, sacred, expressive",
+    cultural_significance: "Classical Indian dance forms like Bharatanatyam are considered offerings to the divine, where every gesture and movement carries spiritual meaning and devotional power.",
+    tags: ["classical dance", "sacred performance", "divine feminine", "mudras", "bharatanatyam", "worship", "grace"]
+  },
+  {
+    id: 21,
+    title: "Moonlit Meditation",
+    artist: "Kondapalli Sheshagiri Rao",
+    category: "spiritual",
+    image: image7,
+    description: "A serene night scene of a sage in deep meditation under the gentle light of the full moon. The composition evokes the profound peace and spiritual illumination that comes from nocturnal contemplation and inner journey.",
+    year: "1979",
+    medium: "Aqua texture on canvas",
+    dimensions: "24\" x 18\"",
+    period: "Late Mature Period",
+    emotional_tone: "Serene, contemplative, illuminated",
+    cultural_significance: "Night meditation under moonlight is considered particularly powerful in Indian spiritual traditions, as the calm energy supports deep introspection and cosmic connection.",
+    tags: ["meditation", "moonlight", "sage", "night", "contemplation", "spiritual illumination", "inner journey", "peace"]
+  },
+  {
+    id: 22,
+    title: "Village Market",
+    artist: "Kondapalli Sheshagiri Rao",
+    category: "folk_life",
+    image: image8,
+    description: "A bustling village market scene filled with vendors, customers, and the vibrant exchange of daily life. The painting captures the economic and social heart of rural communities, where commerce and community intersect.",
+    year: "1974",
+    medium: "Aqua texture on canvas",
+    dimensions: "32\" x 24\"",
+    period: "Mature Period",
+    emotional_tone: "Lively, communal, vibrant",
+    cultural_significance: "Village markets represent the economic foundation of rural life and the social bonds that sustain traditional communities through mutual exchange and support.",
+    tags: ["village market", "commerce", "community", "daily life", "social bonds", "rural economy", "exchange", "vendors"]
+  },
+  {
+    id: 23,
+    title: "River Blessing",
+    artist: "Kondapalli Sheshagiri Rao",
+    category: "spiritual",
+    image: image9,
+    description: "Devotees gathering at a sacred river for ritual bathing and prayers. The painting portrays the profound spiritual connection between water, purification, and divine grace in Hindu tradition.",
+    year: "1975",
+    medium: "Aqua texture on canvas",
+    dimensions: "30\" x 24\"",
+    period: "Mature Period",
+    emotional_tone: "Sacred, purifying, reverent",
+    cultural_significance: "Rivers are considered goddesses in Hindu tradition, and ritual bathing in sacred waters is believed to purify the soul and wash away karmic impurities.",
+    tags: ["sacred river", "ritual bathing", "purification", "devotees", "divine grace", "water goddess", "spirituality"]
+  },
+  {
+    id: 24,
+    title: "Cosmic Dancer",
+    artist: "Kondapalli Sheshagiri Rao",
+    category: "mythology",
+    image: image10,
+    description: "A powerful representation of the cosmic dancer, embodying the eternal rhythm of creation, preservation, and destruction. The figure moves within a circle of divine fire, representing the cyclical nature of existence.",
+    year: "1980",
+    medium: "Aqua texture on canvas",
+    dimensions: "30\" x 30\"",
+    period: "Late Mature Period",
+    emotional_tone: "Dynamic, cosmic, powerful",
+    cultural_significance: "The cosmic dance represents the fundamental rhythm of the universe, where divine energy maintains the eternal cycles of creation and dissolution.",
+    mythological_reference: "Inspired by Nataraja - Shiva as the cosmic dancer",
+    tags: ["cosmic dance", "nataraja", "creation", "destruction", "eternal rhythm", "divine fire", "cycles", "universe"]
+  },
+  {
+    id: 25,
+    title: "Harvest Celebration",
+    artist: "Kondapalli Sheshagiri Rao",
+    category: "folk_life",
+    image: image11,
+    description: "A joyous celebration of the harvest season, showing farmers and their families giving thanks for the year's bounty. The painting radiates gratitude and the deep connection between human labor and nature's abundance.",
+    year: "1976",
+    medium: "Aqua texture on canvas",
+    dimensions: "34\" x 26\"",
+    period: "Mature Period",
+    emotional_tone: "Joyful, grateful, abundant",
+    cultural_significance: "Harvest festivals represent humanity's gratitude to Mother Earth and the divine forces that ensure agricultural prosperity and food security.",
+    tags: ["harvest", "celebration", "farmers", "gratitude", "abundance", "mother earth", "agricultural", "prosperity"]
+  },
+  {
+    id: 26,
+    title: "Temple Courtyard",
+    artist: "Kondapalli Sheshagiri Rao",
+    category: "spiritual",
+    image: image13,
+    description: "A sacred temple courtyard filled with devotees in prayer and contemplation. The architectural grandeur and spiritual atmosphere capture the temple as a meeting place between earth and heaven.",
+    year: "1977",
+    medium: "Aqua texture on canvas",
+    dimensions: "32\" x 24\"",
+    period: "Mature Period",
+    emotional_tone: "Sacred, devotional, architectural",
+    cultural_significance: "Temple courtyards serve as communal spiritual spaces where individual devotion merges with collective worship, creating a powerful field of divine energy.",
+    tags: ["temple", "courtyard", "architecture", "devotees", "prayer", "sacred space", "spiritual community", "divine energy"]
+  },
+  {
+    id: 27,
+    title: "Portrait of the Master",
+    artist: "Kondapalli Sheshagiri Rao",
+    category: "cultural",
+    image: photoJH,
+    description: "A contemplative self-portrait of the master artist, capturing the wisdom and spiritual depth that infused his life's work. The painting reflects his journey as both creator and seeker on the path of artistic devotion.",
+    year: "1982",
+    medium: "Aqua texture on canvas",
+    dimensions: "20\" x 16\"",
+    period: "Late Mature Period",
+    emotional_tone: "Contemplative, wise, introspective",
+    cultural_significance: "Represents the artist's philosophy that the creator must embody the spiritual values expressed in their art, becoming a vessel for divine creativity.",
+    tags: ["self portrait", "master artist", "wisdom", "spiritual depth", "introspection", "divine creativity", "artistic devotion"]
+  },
+  {
+    id: 28,
+    title: "The Artist's Vision",
+    artist: "Kondapalli Sheshagiri Rao",
+    category: "cultural",
+    image: photo,
+    description: "A portrait capturing the artist in a moment of creative inspiration, his eyes reflecting the inner vision that guided his artistic expression. The composition embodies the marriage of technical skill and spiritual insight.",
+    year: "1983",
+    medium: "Aqua texture on canvas",
+    dimensions: "18\" x 14\"",
+    period: "Late Mature Period",
+    emotional_tone: "Inspired, visionary, creative",
+    cultural_significance: "Represents the concept of the artist as a conduit for divine inspiration, where personal vision serves universal truth and cultural preservation.",
+    tags: ["artist portrait", "creative inspiration", "inner vision", "artistic expression", "divine inspiration", "cultural preservation"]
+  },
+  {
+    id: 29,
+    title: "Legacy Portrait",
+    artist: "Kondapalli Sheshagiri Rao",
+    category: "cultural",
+    image: photo2,
+    description: "A formal portrait commemorating the artist's contribution to Indian art and culture. The dignified composition reflects his role as both cultural guardian and innovative creator in the modern artistic landscape.",
+    year: "1984",
+    medium: "Aqua texture on canvas",
     dimensions: "22\" x 18\"",
-    medium: "Oil on canvas",
-    cultural_significance: "Celebrates agricultural traditions and the importance of community cooperation in rural Indian life",
-    tags: ["folk_life", "harvest", "agriculture", "community", "abundance", "rural_wisdom", "earth_tones"],
-    emotional_tone: "Joyful and abundant",
-    filename: "3.jpg"
+    period: "Late Period",
+    emotional_tone: "Dignified, commemorative, honored",
+    cultural_significance: "Honors the artist's legacy as a bridge between traditional Indian art forms and contemporary expression, preserving cultural heritage for future generations.",
+    tags: ["legacy portrait", "cultural guardian", "artistic innovation", "heritage preservation", "modern art", "dignified", "commemorative"]
   }
 ];
 
-// Category definitions for the memorial website
+// Categories with counts and descriptions for filtering
 export const categories = [
-  { 
-    id: "all", 
-    label: "Complete Legacy", 
+  {
+    id: "all",
+    label: "All Artworks",
     count: artworks.length,
-    description: "The complete artistic heritage of Kondapalli Sheshagiri Rao"
+    description: "Complete collection spanning all themes and periods"
   },
-  { 
-    id: "mythology", 
-    label: "Sacred Mythology", 
-    count: artworks.filter(a => a.category === "mythology").length,
-    description: "Divine stories and mythological narratives from Hindu tradition"
+  {
+    id: "mythology",
+    label: "Mythology",
+    count: artworks.filter(art => art.category === "mythology").length,
+    description: "Divine stories and epic tales from Hindu scriptures"
   },
-  { 
-    id: "folk_life", 
-    label: "Folk Life", 
-    count: artworks.filter(a => a.category === "folk_life").length,
-    description: "Celebrations of rural Indian life and cultural traditions"
+  {
+    id: "spiritual",
+    label: "Spiritual",
+    count: artworks.filter(art => art.category === "spiritual").length,
+    description: "Devotional works and mystical experiences"
   },
-  { 
-    id: "nature", 
-    label: "Natural Harmony", 
-    count: artworks.filter(a => a.category === "nature").length,
-    description: "The sacred relationship between humanity and the natural world"
+  {
+    id: "folk_life",
+    label: "Folk Life",
+    count: artworks.filter(art => art.category === "folk_life").length,
+    description: "Rural scenes and traditional community life"
   },
-  { 
-    id: "spiritual", 
-    label: "Spiritual Wisdom", 
-    count: artworks.filter(a => a.category === "spiritual").length,
-    description: "Contemplative works exploring divine consciousness and wisdom"
+  {
+    id: "nature",
+    label: "Nature",
+    count: artworks.filter(art => art.category === "nature").length,
+    description: "Natural beauty and divine creation"
   },
-  { 
-    id: "historical", 
-    label: "Historical Narratives", 
-    count: artworks.filter(a => a.category === "historical").length,
-    description: "Epic tales and historical moments from India's glorious past"
+  {
+    id: "cultural",
+    label: "Cultural",
+    count: artworks.filter(art => art.category === "cultural").length,
+    description: "Regional traditions and cultural heritage"
   }
 ];
 
-// Helper functions for the gallery
+// Helper functions for artwork filtering and search
 export const getArtworksByCategory = (category: string): Artwork[] => {
-  if (category === "all") return artworks;
+  if (category === "all") {
+    return artworks;
+  }
   return artworks.filter(artwork => artwork.category === category);
 };
 
 export const searchArtworks = (query: string): Artwork[] => {
-  const searchTerms = query.toLowerCase().split(' ');
+  const searchTerm = query.toLowerCase();
   return artworks.filter(artwork => 
-    searchTerms.every(term =>
-      artwork.title.toLowerCase().includes(term) ||
-      artwork.description.toLowerCase().includes(term) ||
-      artwork.tags.some(tag => tag.toLowerCase().includes(term)) ||
-      artwork.cultural_significance.toLowerCase().includes(term) ||
-      artwork.mythological_reference?.toLowerCase().includes(term)
-    )
+    artwork.title.toLowerCase().includes(searchTerm) ||
+    artwork.description.toLowerCase().includes(searchTerm) ||
+    artwork.tags.some(tag => tag.toLowerCase().includes(searchTerm)) ||
+    artwork.cultural_significance.toLowerCase().includes(searchTerm) ||
+    artwork.mythological_reference?.toLowerCase().includes(searchTerm) ||
+    artwork.emotional_tone.toLowerCase().includes(searchTerm) ||
+    artwork.medium.toLowerCase().includes(searchTerm) ||
+    artwork.category.toLowerCase().includes(searchTerm)
   );
 };
 
