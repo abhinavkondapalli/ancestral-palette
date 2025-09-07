@@ -212,6 +212,109 @@
     transform: translateY(-4px);
   }
 
+  /* Optimized Image Display Strategies */
+  .artwork-image {
+    object-fit: contain;
+    object-position: center;
+    background: linear-gradient(135deg, hsl(var(--muted)) 0%, hsl(var(--background)) 100%);
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    image-rendering: high-quality;
+    filter: contrast(1.05) saturate(1.1) brightness(1.02);
+    transition: var(--transition-smooth);
+  }
+
+  .artwork-image:hover {
+    filter: contrast(1.08) saturate(1.15) brightness(1.05);
+    transform: scale(1.02);
+  }
+
+  /* Hero Image Optimization */
+  .hero-image {
+    object-fit: contain;
+    object-position: center center;
+    background: radial-gradient(ellipse at center, hsl(var(--muted)) 0%, hsl(var(--background)) 70%);
+    filter: brightness(0.85) contrast(1.15) saturate(1.1);
+    image-rendering: high-quality;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Responsive Image Container */
+  .image-container {
+    position: relative;
+    background: linear-gradient(135deg, hsl(var(--muted)) 0%, hsl(var(--background)) 100%);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 49%, hsl(var(--border) / 0.1) 50%, transparent 51%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Enhanced Image Quality Settings */
+  .high-quality-image {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    image-rendering: high-quality;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    will-change: transform;
+  }
+
+  /* Responsive Image Breakpoints */
+  @media (max-width: 640px) {
+    .artwork-image {
+      height: 250px;
+    }
+    .image-container {
+      height: 250px;
+    }
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    .artwork-image {
+      height: 320px;
+    }
+    .image-container {
+      height: 320px;
+    }
+  }
+
+  @media (min-width: 1025px) {
+    .artwork-image {
+      height: 350px;
+    }
+    .image-container {
+      height: 350px;
+    }
+  }
+
+  /* Image Loading States */
+  .image-loading {
+    background: linear-gradient(90deg, hsl(var(--muted)) 25%, hsl(var(--background)) 50%, hsl(var(--muted)) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
   /* Cultural Patterns */
   .pattern-border {
     position: relative;

@@ -7,6 +7,11 @@ import heroImage from "@/assets/Paintings-Images/Photo2.jpg";
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  // Curated selection of featured artworks for hero display
+  const featuredArtworks = artworks.filter(artwork => 
+    ["Divine Lotus Maiden", "Goddess Durga - Divine Protector", "Shakuntala - The Forsaken Maiden", "Telugu Thalli - Mother Telugu"].includes(artwork.title)
+  );
+
   const slides = [
     {
       id: 1,
@@ -16,30 +21,16 @@ const HeroSection = () => {
       image: heroImage,
       accent: "1924 - 2011"
     },
-    {
-      id: 2,
-      title: artworks[0].title,
-      subtitle: "Sacred Mythology",
-      description: artworks[0].description,
-      image: artworks[0].image,
-      accent: artworks[0].emotional_tone
-    },
-    {
-      id: 3,
-      title: artworks[1].title,
-      subtitle: "Divine Forest Narrative",
-      description: artworks[1].description,
-      image: artworks[1].image,
-      accent: artworks[1].emotional_tone
-    },
-    {
-      id: 4,
-      title: artworks[9].title,
-      subtitle: "Cosmic Consciousness",
-      description: artworks[9].description,
-      image: artworks[9].image,
-      accent: artworks[9].emotional_tone
-    }
+    ...featuredArtworks.map((artwork, index) => ({
+      id: index + 2,
+      title: artwork.title,
+      subtitle: artwork.category === "mythology" ? "Sacred Mythology" : 
+               artwork.category === "spiritual" ? "Divine Spirituality" :
+               artwork.category === "cultural" ? "Cultural Heritage" : "Folk Tradition",
+      description: artwork.description,
+      image: artwork.image,
+      accent: artwork.emotional_tone
+    }))
   ];
 
   useEffect(() => {
@@ -71,12 +62,9 @@ const HeroSection = () => {
             <img
               src={slide.image}
               alt={`${slide.title} - ${slide.description}`}
-              className="w-full h-full object-contain lg:object-cover"
-              style={{
-                objectPosition: 'center center',
-                filter: 'brightness(0.85) contrast(1.15) saturate(1.1)'
-              }}
+              className="hero-image high-quality-image"
               loading={index === 0 ? "eager" : "lazy"}
+              sizes="100vw"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
                 target.src = '/placeholder.svg';

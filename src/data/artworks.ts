@@ -48,22 +48,22 @@ export interface Artwork {
 
 // Comprehensive artwork collection showcasing Kondapalli Sheshagiri Rao's artistic legacy
 export const artworks: Artwork[] = [
-  {
-    id: 1,
-    title: "Divine Lotus Maiden",
-    artist: "Kondapalli Sheshagiri Rao",
-    category: "mythology",
-    image: image2,
-    description: "An enchanting portrayal of celestial grace, depicting a divine maiden emerging from sacred lotus blooms. The figure embodies the spiritual purity and feminine divinity revered in Indian mythology, painted with the master's signature aqua texture technique.",
-    year: "1975",
-    medium: "Aqua texture on canvas",
-    dimensions: "24\" x 18\"",
-    period: "Mature Period",
-    emotional_tone: "Serene, divine, transcendent",
-    cultural_significance: "Represents the lotus as a symbol of spiritual awakening and divine feminine energy in Hindu philosophy. The celestial maiden embodies Lakshmi's grace and purity.",
-    mythological_reference: "Inspired by Padmini legends and Lakshmi iconography",
-    tags: ["lotus", "divine feminine", "celestial", "mythology", "aqua texture", "spirituality", "purity", "sacred"]
-  },
+    {
+      id: 1,
+      title: "Divine Lotus Maiden",
+      artist: "Kondapalli Sheshagiri Rao",
+      category: "mythology",
+      image: image2,
+      description: "An enchanting portrayal of celestial grace, depicting a divine maiden emerging from sacred lotus blooms. The figure embodies the spiritual purity and feminine divinity revered in Indian mythology, painted with the master's signature aqua texture technique.",
+      year: "1975",
+      medium: "Aqua texture on canvas",
+      dimensions: "24\" x 18\"",
+      period: "Mature Period",
+      emotional_tone: "Serene, divine, transcendent",
+      cultural_significance: "Represents the lotus as a symbol of spiritual awakening and divine feminine energy in Hindu philosophy. The celestial maiden embodies Lakshmi's grace and purity.",
+      mythological_reference: "Inspired by Padmini legends and Lakshmi iconography",
+      tags: ["lotus", "divine feminine", "celestial", "mythology", "aqua texture", "spirituality", "purity", "sacred", "featured"]
+    },
   {
     id: 2,
     title: "Ahalya Devi - The Pure Soul",

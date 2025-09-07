@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Search, Filter, Grid, List, Heart, Share2, ZoomIn } from "lucide-react";
+import OptimizedImage from "@/components/OptimizedImage";
 import { artworks, categories, getArtworksByCategory, searchArtworks } from "@/data/artworks";
 import { WatermarkSection } from "@/components/WatermarkBackground";
 
@@ -105,17 +106,14 @@ const GallerySection = () => {
         }`}>
           {filteredArtworks.map((artwork) => (
             <Card key={artwork.id} className="artwork-card overflow-hidden group cursor-pointer">
-              <div className="relative overflow-hidden">
-                <img
+              <div className="image-container relative h-80">
+                <OptimizedImage
                   src={artwork.image}
                   alt={`${artwork.title} - ${artwork.description}`}
-                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
-                  loading="lazy"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.src = '/placeholder.svg';
-                    target.alt = 'Artwork image unavailable';
-                  }}
+                  className="artwork-image w-full h-full group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  aspectRatio="auto"
+                  objectFit="contain"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300">
                   <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -194,6 +192,7 @@ const GallerySection = () => {
                     const contactSection = document.getElementById('contact');
                     contactSection?.scrollIntoView({ behavior: 'smooth' });
                   }}
+                  aria-label={`Contact about ${artwork.title}`}
                 >
                   Enquire to Collect
                 </Button>
