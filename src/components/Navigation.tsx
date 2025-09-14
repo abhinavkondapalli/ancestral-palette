@@ -37,7 +37,7 @@ const Navigation = () => {
               <h1 className="text-xl font-serif font-semibold text-foreground">
                 Sheshagiri Rao Memorial
               </h1>
-              <p className="text-xs text-muted-foreground">Master Artist · 1924-2011</p>
+              <p className="text-xs text-muted-foreground">Master Artist · 1924-2012</p>
             </div>
           </div>
 

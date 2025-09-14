@@ -15,8 +15,8 @@ import goddessDurga from "@/assets/Paintings-Images/Godess Durga.jpg";
 import pandavaJourney from "@/assets/Paintings-Images/Pandava's Journey.jpeg";
 import peacock from "@/assets/Paintings-Images/Peacock.jpg";
 import photoJH from "@/assets/Paintings-Images/Photo-JH.avif";
-import photo from "@/assets/Paintings-Images/Photo.avif";
-import photo2 from "@/assets/Paintings-Images/Photo2.jpg";
+//import photo from "@/assets/Photo.avif";
+//import photo2 from "@/assets/Photo2.jpg";./
 import shakuntala from "@/assets/Paintings-Images/Shakuntala.jpg";
 import thyagaraju from "@/assets/Paintings-Images/Thyagaraju.jpg";
 import new1 from "@/assets/Paintings-Images/new-1.jpg";
@@ -450,11 +450,11 @@ export const artworks: Artwork[] = [
   },
   {
     id: 27,
-    title: "Portrait of the Master",
+    title: "Portrait of the Master with Jawaharlal Nehru",
     artist: "Kondapalli Sheshagiri Rao",
     category: "cultural",
     image: photoJH,
-    description: "A contemplative self-portrait of the master artist, capturing the wisdom and spiritual depth that infused his life's work. The painting reflects his journey as both creator and seeker on the path of artistic devotion.",
+    description: "A capture of the artist Kondapalli Sheshagiri Rao in a moment of recognition with India's first Prime Minister, Jawaharlal Nehru. The photo reflects the artist's esteemed position in the cultural landscape of India and his dedication to preserving and innovating Indian art traditions.",
     year: "1982",
     medium: "Aqua texture on canvas",
     dimensions: "20\" x 16\"",
@@ -463,7 +463,7 @@ export const artworks: Artwork[] = [
     cultural_significance: "Represents the artist's philosophy that the creator must embody the spiritual values expressed in their art, becoming a vessel for divine creativity.",
     tags: ["self portrait", "master artist", "wisdom", "spiritual depth", "introspection", "divine creativity", "artistic devotion"]
   },
-  {
+  /*{
     id: 28,
     title: "The Artist's Vision",
     artist: "Kondapalli Sheshagiri Rao",
@@ -477,8 +477,8 @@ export const artworks: Artwork[] = [
     emotional_tone: "Inspired, visionary, creative",
     cultural_significance: "Represents the concept of the artist as a conduit for divine inspiration, where personal vision serves universal truth and cultural preservation.",
     tags: ["artist portrait", "creative inspiration", "inner vision", "artistic expression", "divine inspiration", "cultural preservation"]
-  },
-  {
+  },*/
+  /*{
     id: 29,
     title: "Legacy Portrait",
     artist: "Kondapalli Sheshagiri Rao",
@@ -492,7 +492,7 @@ export const artworks: Artwork[] = [
     emotional_tone: "Dignified, commemorative, honored",
     cultural_significance: "Honors the artist's legacy as a bridge between traditional Indian art forms and contemporary expression, preserving cultural heritage for future generations.",
     tags: ["legacy portrait", "cultural guardian", "artistic innovation", "heritage preservation", "modern art", "dignified", "commemorative"]
-  }
+  }*/
 ];
 
 // Categories with counts and descriptions for filtering

@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Palette, Heart, Award, Users } from "lucide-react";
 import { WatermarkSection } from "@/components/WatermarkBackground";
-import photoImg from "@/assets/Paintings-Images/Photo.avif";
+import photoImg from "@/assets/Photo.avif";
 
 const AboutSection = () => {
   const achievements = [
@@ -14,9 +14,9 @@ const AboutSection = () => {
     },
     {
       icon: <Heart className="h-8 w-8 text-highlight" />,
-      title: "99 Years",
-      subtitle: "Life of Service",
-      description: "Nearly a century dedicated to art, education, and cultural preservation (1924-2023)"
+      title: "Decades of service",
+      subtitle: "Life Dedicated to Art",
+      description: "Life dedicated to art, education, and cultural preservation"
     },
     {
       icon: <Award className="h-8 w-8 text-accent" />,
@@ -26,7 +26,7 @@ const AboutSection = () => {
     },
     {
       icon: <Users className="h-8 w-8 text-contrast" />,
-      title: "HoD at JNTU",
+      title: "Head of the Department at JNTU",
       subtitle: "Educational Legacy",
       description: "Head of Department at College of Arts & Crafts, mentoring generations of artists"
     }

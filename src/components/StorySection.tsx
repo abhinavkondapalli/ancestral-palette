@@ -41,7 +41,7 @@ const StorySection = () => {
       description: "Post-retirement, dedicated himself to reviving Cheriyal scroll painting tradition, leading to its prestigious GI (Geographical Indication) recognition in 2008."
     },
     {
-      year: "2023-25",
+      year: "1924-2012",
       event: "Eternal Legacy",
       description: "Centenary celebrations with 'Reviving the Roots' retrospective at State Art Gallery, Hyderabad, featuring 290 works. His legacy lives on as a beacon of cultural preservation."
     }

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, Play } from "lucide-react";
 import { artworks } from "@/data/artworks";
-import heroImage from "@/assets/Paintings-Images/Photo2.jpg";
+import heroImage from "@/assets/Photo2.jpg";
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -19,7 +19,7 @@ const HeroSection = () => {
       subtitle: "Master of Indian Cultural Art",
       description: "In loving memory of an artist whose life was devoted to preserving India's sacred artistic traditions.",
       image: heroImage,
-      accent: "1924 - 2011"
+      accent: "1924 - 2012"
     },
     ...featuredArtworks.map((artwork, index) => ({
       id: index + 2,
