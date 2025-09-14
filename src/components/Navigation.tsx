@@ -30,12 +30,10 @@ const Navigation = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <img
-              src={logo}
-              alt="KS Logo"
-              className="h-10 w-10 object-contain rounded-md"
-            />
+          <div className="flex items-center space-x-2">
+            <div className="w-8 h-8 hero-gradient rounded-lg flex items-center justify-center">
+              <span className="text-primary-foreground font-bold text-sm">AG</span>
+            </div>
             <div>
               <h1 className="text-xl font-serif font-semibold text-foreground">
                 Sheshagiri Rao Memorial
