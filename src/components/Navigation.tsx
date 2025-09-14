@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Search, Menu, X } from "lucide-react";
+import LogoImage from "@/assets/Logo/Minimalist 'KS' Logo.png";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,9 +30,13 @@ const Navigation = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 hero-gradient rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">AG</span>
+          <div className="flex items-center space-x-3">
+            <div className="w-10 h-10 flex items-center justify-center">
+              <img 
+                src={LogoImage} 
+                alt="Kondapalli Sheshagiri Rao Logo" 
+                className="w-full h-full object-contain"
+              />
             </div>
             <div>
               <h1 className="text-xl font-serif font-semibold text-foreground">
