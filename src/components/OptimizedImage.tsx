@@ -86,7 +86,10 @@ export const OptimizedImage = ({
         sizes={sizes}
         loading={priority ? "eager" : "lazy"}
         onLoad={handleLoad}
-        onError={handleError}
+        onError={(e) => {
+          console.error(`Failed to load image: ${src}`, e);
+          handleError();
+        }}
         style={{
           backfaceVisibility: "hidden",
           transform: "translateZ(0)"

@@ -13,7 +13,13 @@ const setFavicon = (href: string) => {
   link.href = href;
 };
 
-// set favicon to the imported logo (Vite will resolve the asset)
-setFavicon(logoPng);
+// Set favicon to the imported logo (Vite will resolve the asset)
+try {
+  setFavicon(logoPng);
+} catch (error) {
+  console.error('Failed to set favicon:', error);
+  // Fallback to default favicon
+  setFavicon('/favicon.png');
+}
 
 createRoot(document.getElementById("root")!).render(<App />);

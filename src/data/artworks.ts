@@ -1,3 +1,4 @@
+// Import all artwork images with correct ES6 module imports
 import image2 from "@/assets/Paintings-Images/2.png";
 import image3 from "@/assets/Paintings-Images/3.jpg";
 import image4 from "@/assets/Paintings-Images/4.jpg";
@@ -15,8 +16,6 @@ import goddessDurga from "@/assets/Paintings-Images/Godess Durga.jpg";
 import pandavaJourney from "@/assets/Paintings-Images/Pandava's Journey.jpeg";
 import peacock from "@/assets/Paintings-Images/Peacock.jpg";
 import photoJH from "@/assets/Paintings-Images/Photo-JH.avif";
-//import photo from "@/assets/Photo.avif";
-//import photo2 from "@/assets/Photo2.jpg";./
 import shakuntala from "@/assets/Paintings-Images/Shakuntala.jpg";
 import thyagaraju from "@/assets/Paintings-Images/Thyagaraju.jpg";
 import new1 from "@/assets/Paintings-Images/new-1.jpg";

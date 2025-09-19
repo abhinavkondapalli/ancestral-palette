@@ -33,8 +33,12 @@ const Navigation = () => {
           <div className="flex items-center space-x-3">
             <img
               src={logo}
-              alt="KS Logo"
+              alt="KS Logo - Kondapalli Sheshagiri Rao Memorial"
               className="h-10 w-10 object-contain rounded-md"
+              onError={(e) => {
+                console.error('Logo failed to load:', logo);
+                e.currentTarget.style.display = 'none';
+              }}
             />
             <div>
               <h1 className="text-xl font-serif font-semibold text-foreground">
