@@ -2,9 +2,9 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Search, Menu, X } from "lucide-react";
-import logo from "@/assets/Logo/Minimalist 'KS' Logo.png";
+import logo from "@/assets/Logo/KS_Logo.png";
 
-const Navigation = () => {
+function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -38,8 +38,7 @@ const Navigation = () => {
               onError={(e) => {
                 console.error('Logo failed to load:', logo);
                 e.currentTarget.style.display = 'none';
-              }}
-            />
+              } } />
             <div>
               <h1 className="text-xl font-serif font-semibold text-foreground">
                 Sheshagiri Rao Memorial
@@ -71,8 +70,7 @@ const Navigation = () => {
                 placeholder="Search artworks..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10 w-64 bg-muted/50 border-border"
-              />
+                className="pl-10 w-64 bg-muted/50 border-border" />
             </div>
 
             {/* Mobile Menu Button */}
@@ -107,8 +105,7 @@ const Navigation = () => {
                   placeholder="Search artworks..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-10 bg-muted/50 border-border"
-                />
+                  className="pl-10 bg-muted/50 border-border" />
               </div>
             </div>
           </div>
@@ -116,6 +113,6 @@ const Navigation = () => {
       </div>
     </nav>
   );
-};
+}
 
 export default Navigation;

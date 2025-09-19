@@ -1,7 +1,7 @@
 import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
-import logoPng from "@/assets/Logo/Minimalist 'KS' Logo.png";
+import logoPng from "@/assets/Logo/KS_Logo.png";
 
 const setFavicon = (href: string) => {
   let link: HTMLLinkElement | null = document.querySelector("link[rel~='icon']");
